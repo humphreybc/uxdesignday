@@ -1,3 +1,31 @@
+body {
+  background-color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  color: #222;
+  padding: 80px 0px 0px;
+  margin: 0px;
+  -webkit-font-smoothing: antialiased;
+}
+.logo {
+  background-image: url("../img/logo.png");
+  background-size: cover;
+  width: 220px;
+  height: 200px;
+}
+.gap {
+  height: 40px;
+  clear: both;
+  overflow: hidden;
+}
+.center {
+  text-align: center;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
 header {
   background-color: #fff;
   height: 100px;
@@ -196,32 +224,4 @@ bold {
 }
 .icon-github:before {
   content: "\e007";
-}
-body {
-  background-color: #fff;
-  font-family: 'Open Sans', sans-serif;
-  color: #222;
-  padding: 80px 0px 0px;
-  margin: 0px;
-  -webkit-font-smoothing: antialiased;
-}
-.logo {
-  background-image: url("../img/logo.png");
-  background-size: cover;
-  width: 220px;
-  height: 200px;
-}
-.gap {
-  height: 40px;
-  clear: both;
-  overflow: hidden;
-}
-.center {
-  text-align: center;
-}
-.left {
-  float: left;
-}
-.right {
-  float: right;
 }
