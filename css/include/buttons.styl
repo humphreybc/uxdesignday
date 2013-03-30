@@ -1,0 +1,30 @@
+// Button style
+
+.button
+  color white
+  background-color darkBlue
+  padding 30px 40px 30px 130px
+  font-size 24px
+  font-weight 700
+  text-transform uppercase
+  margin 20px 0px
+  box-shadow 10px 10px 0px darkerBlue
+  transition background-color 150ms, margin 150ms, box-shadow 150ms
+  position relative
+  float left
+
+  &:hover
+    background-color lighten(darkBlue, 2)
+
+  &:active
+    box-shadow none
+    margin 30px 0px 10px 10px
+
+  .button-inner
+    background-color rgba(0,0,0,0.15)
+    position absolute
+    left 0px
+    top 0px
+    height 100%
+    padding 0px 30px
+    line-height 92px

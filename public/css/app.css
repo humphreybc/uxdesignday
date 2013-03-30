@@ -1,4 +1,215 @@
+header {
+  background-color: #fff;
+  height: 80px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  z-index: 150;
+  width: 100%;
+}
+header nav ul {
+  padding: 25px 0px 0px;
+  margin: 0px;
+}
+header nav ul li {
+  float: left;
+  display: inline-block;
+  list-style-type: none;
+  margin-right: 60px;
+}
+header nav ul li:last-child {
+  margin-right: 0px;
+}
+header nav ul li a {
+  color: #222;
+  font-weight: 600;
+}
+header nav ul li a:hover {
+  color: #2ba6d4;
+}
+.button {
+  color: #fff;
+  background-color: #207c9f;
+  padding: 30px 40px 30px 130px;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 20px 0px;
+  box-shadow: 10px 10px 0px #15536a;
+  transition: background-color 150ms, margin 150ms, box-shadow 150ms;
+  position: relative;
+  float: left;
+}
+.button:hover {
+  background-color: #2283a7;
+}
+.button:active {
+  box-shadow: none;
+  margin: 30px 0px 10px 10px;
+}
+.button .button-inner {
+  background-color: rgba(0,0,0,0.15);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  padding: 0px 30px;
+  line-height: 92px;
+}
+section {
+  padding: 60px 0px 80px;
+  overflow: hidden;
+}
+.container {
+  width: 1000px;
+  margin: 0px auto;
+  padding: 0px 20px;
+  clear: both;
+  overflow: hidden;
+}
+#reasons {
+  margin-top: 40px;
+}
+.box {
+  color: #fff;
+  float: left;
+  width: 320px;
+  margin-right: 20px;
+  box-sizing: border-box;
+}
+.box:last-child {
+  margin-right: 0px;
+}
+.box-speaker {
+  background-color: #ddd;
+  height: 320px;
+}
+.box-lightning {
+  background-color: #ddd;
+  width: 150px;
+  height: 150px;
+}
+h1 {
+  font-size: 36px;
+  line-height: 45px;
+  font-weight: 600;
+  margin: 0px 0px 40px;
+}
+h2 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+b,
+strong,
+bold {
+  font-weight: 700;
+}
+.blue {
+  background-color: #2ba6d4;
+  color: #fff;
+}
+.black {
+  background-color: #222;
+  color: #fff;
+}
+@font-face {
+  font-family: 'uxdesignday';
+  src: url("fonts/uxdesignday.eot");
+  src: url("fonts/uxdesignday.eot?#iefix") format('embedded-opentype'), url("fonts/uxdesignday.woff") format('woff'), url("fonts/uxdesignday.ttf") format('truetype'), url("fonts/uxdesignday.svg#uxdesignday") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[data-icon]:before {
+  font-family: 'uxdesignday';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.icon-ticket,
+.icon-users,
+.icon-flag,
+.icon-calendar,
+.icon-facebook,
+.icon-twitter,
+.icon-googleplus,
+.icon-github {
+  font-family: 'uxdesignday';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.icon-ticket:before {
+  content: "\e000";
+}
+.icon-users:before {
+  content: "\e001";
+}
+.icon-flag:before {
+  content: "\e002";
+}
+.icon-calendar:before {
+  content: "\e003";
+}
+.icon-facebook:before {
+  content: "\e004";
+}
+.icon-twitter:before {
+  content: "\e005";
+}
+.icon-googleplus:before {
+  content: "\e006";
+}
+.icon-github:before {
+  content: "\e007";
+}
 body {
   background-color: #fff;
   font-family: 'Open Sans', sans-serif;
+  color: #222;
+  padding: 80px 0px 0px;
+  margin: 0px;
+  -webkit-font-smoothing: antialiased;
+}
+.logo {
+  background-image: url("../img/logo.png");
+  background-size: cover;
+  width: 220px;
+  height: 200px;
+}
+.gap {
+  height: 40px;
+  clear: both;
+  overflow: hidden;
+}
+.center {
+  text-align: center;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
 }
