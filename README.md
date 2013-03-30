@@ -10,4 +10,10 @@ Uses [Coffeescript](http://coffeescript.org/) and [Stylus](http://learnboost.git
 
 ### Using Grunt
 
-A Gruntfile with a `dev` task is available for development. Install the node prerequisites with `npm install` and run `grunt dev` to watch changes to CoffeeScript and Stylus files.
+* [gruntjs.com](http://gruntjs.com/)
+* [nodejs.org](http://nodejs.org/)
+* [npmjs.org](https://npmjs.org/)
+
+A Gruntfile with a 'dev' task is available for development. Install the node prerequisites with 'npm install' and run 'grunt dev' to watch changes to CoffeeScript and Stylus files.
+
+You might need to run 'npm install -g grunt-cli' as root beforehand.
