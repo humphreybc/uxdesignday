@@ -1,9 +1,6 @@
 {
   "name": "uxdesignday",
   "version": "0.0.0",
-  "scripts": {
-    "preinstall": "npm i -g grunt-cli"
-  },
   "devDependencies": {
     "coffee-script": "~1.4.0",
     "testacular": "~0.6.0",
