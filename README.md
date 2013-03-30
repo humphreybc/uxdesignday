@@ -8,15 +8,25 @@ Source code for uxdesignday.org - static HTML, CSS, and a little bit of JS.
 
 Uses [Coffeescript](http://coffeescript.org/) and [Stylus](http://learnboost.github.com/stylus/). I compile with [LiveReload](http://livereload.com/) which is pretty great, but any Coffeescript / Stylus compiler will do.
 
-### Using Grunt
+### Running locally with Grunt
 
 * [gruntjs.com](http://gruntjs.com/)
 * [nodejs.org](http://nodejs.org/)
 * [npmjs.org](https://npmjs.org/)
 
-A Gruntfile with a 'dev' task is available for development. Install the node prerequisites with 'npm install' and run 'grunt dev' to watch changes to CoffeeScript and Stylus files.
+A Gruntfile with a 'dev' task is available for development.
 
-You might need to run 'npm install -g grunt-cli' as root beforehand.
+#### Install grunt-cli (may need to use sudo)
+
+    npm install -g grunt-cli
+
+#### Install the node prerequisites
+
+    npm install
+
+#### Run 'grunt dev' to watch for changes in the Coffeescript and Stylus files.
+
+    grunt dev
 
 ### Deploying
 
