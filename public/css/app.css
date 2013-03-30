@@ -5,7 +5,7 @@ body{background-color:#fff;font-family:'Open Sans',sans-serif;color:#222;padding
 .left{float:left}
 .right{float:right}
 .hide{display:none}
-header{background-color:#fff;height:100px;position:fixed;top:0;left:0;overflow:hidden;z-index:150;width:100%;}
+header{background-color:#f7f6f5;height:100px;position:fixed;top:0;left:0;overflow:hidden;z-index:150;width:100%;}
 header nav ul{padding:38px 0 0;margin:0;}
 header nav ul li{float:left;display:inline-block;list-style-type:none;margin-right:40px;}
 header nav ul li:last-child{margin-right:0}
