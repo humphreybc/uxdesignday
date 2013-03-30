@@ -27,6 +27,9 @@ body {
 .right {
   float: right;
 }
+.hide {
+  display: none;
+}
 header {
   background-color: #fff;
   height: 100px;
@@ -84,6 +87,7 @@ header .nav-logo {
 }
 .button:hover {
   background-color: #2283a7;
+  color: #fff;
 }
 .button:active {
   box-shadow: none;
@@ -131,6 +135,24 @@ section {
   width: 150px;
   height: 150px;
 }
+.social {
+  margin: 0px auto;
+  text-align: center;
+}
+.social li {
+  display: inline;
+  margin: 0px 10px;
+}
+.social li a {
+  font-size: 48px;
+  color: #fff;
+}
+.social li .icon-twitter:hover {
+  color: #0099ec;
+}
+.social li .icon-facebook:hover {
+  color: #2d4785;
+}
 h1 {
   font-size: 36px;
   line-height: 45px;
@@ -149,6 +171,10 @@ p {
 }
 a {
   text-decoration: none;
+  color: #2ba6d4;
+}
+a:hover {
+  color: #40afd8;
 }
 ul {
   margin: 0px;
@@ -253,4 +279,20 @@ bold {
     width: 100%;
     box-sizing: border-box;
   }
+}
+#section-2 {
+  display: none;
+}
+#section-3 {
+  display: none;
+}
+.button,
+header {
+  display: none;
+}
+body {
+  padding-top: 0px;
+}
+.hide {
+  display: inline;
 }
