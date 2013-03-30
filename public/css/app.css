@@ -11,6 +11,7 @@ body {
   background-size: cover;
   width: 220px;
   height: 200px;
+  margin-left: 80px;
 }
 .gap {
   height: 40px;
@@ -115,7 +116,7 @@ section {
   color: #fff;
   float: left;
   width: 320px;
-  margin-right: 20px;
+  margin: 0px 20px 20px 0px;
   box-sizing: border-box;
 }
 .box:last-child {
@@ -224,4 +225,28 @@ bold {
 }
 .icon-github:before {
   content: "\e007";
+}
+@media screen and (max-width: 1040px) {
+  .container {
+    width: 700px;
+  }
+  .box {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .container,
+  .box {
+    width: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
+    box-sizing: border-box;
+  }
+  .logo,
+  nav {
+    display: none;
+  }
+  header {
+    position: absolute;
+  }
 }
