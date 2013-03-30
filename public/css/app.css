@@ -1,6 +1,6 @@
 header {
   background-color: #fff;
-  height: 80px;
+  height: 100px;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -9,14 +9,14 @@ header {
   width: 100%;
 }
 header nav ul {
-  padding: 25px 0px 0px;
+  padding: 38px 0px 0px;
   margin: 0px;
 }
 header nav ul li {
   float: left;
   display: inline-block;
   list-style-type: none;
-  margin-right: 60px;
+  margin-right: 40px;
 }
 header nav ul li:last-child {
   margin-right: 0px;
@@ -30,6 +30,15 @@ header nav ul li a:hover {
 }
 header nav ul .icon {
   margin-right: 10px;
+}
+header .nav-logo {
+  background-image: url("../img/navlogo.png");
+  width: 60px;
+  height: 60px;
+  background-size: cover;
+  margin-right: 40px;
+  float: left;
+  margin-top: 20px;
 }
 .button {
   color: #fff;
