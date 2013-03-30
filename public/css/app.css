@@ -6,17 +6,17 @@ body{background-color:#fff;font-family:'Open Sans',sans-serif;color:#222;padding
 .right{float:right}
 .hide{display:none}
 header{background-color:#f7f6f5;height:100px;position:fixed;top:0;left:0;overflow:hidden;z-index:150;width:100%;}
-header nav ul{padding:38px 0 0;margin:0;}
+header nav ul{padding:38px 0 0;margin:0;float:left;}
 header nav ul li{float:left;display:inline-block;list-style-type:none;margin-right:40px;}
 header nav ul li:last-child{margin-right:0}
 header nav ul li a{color:#222;font-weight:600;}
 header nav ul li a:hover{color:#2ba6d4}
 header nav ul .icon{margin-right:10px}
 header .nav-logo{background-image:url("../img/navlogo.png");width:60px;height:60px;background-size:cover;margin-right:40px;float:left;margin-top:20px}
-.button{color:#fff;background-color:#207c9f;padding:30px 40px 30px 130px;font-size:24px;font-weight:700;text-transform:uppercase;margin:20px 0;box-shadow:10px 10px 0 #15536a;transition:background-color 100ms,margin 100ms,box-shadow 100ms;position:relative;float:left;}
+.button{color:#fff;background-color:#207c9f;padding:30px 40px 30px 100px;font-size:20px;font-weight:700;text-transform:uppercase;margin:20px 0;box-shadow:10px 10px 0 #15536a;transition:background-color 100ms,margin 100ms,box-shadow 100ms;position:relative;float:left;text-align:center;}
 .button:hover{background-color:#2283a7;color:#fff}
 .button:active{box-shadow:none;margin:30px 0 10px 10px}
-.button .button-inner{background-color:rgba(0,0,0,0.15);position:absolute;left:0;top:0;height:100%;padding:0 30px;line-height:92px}
+.button .button-inner{background-color:rgba(0,0,0,0.15);position:absolute;left:0;top:0;height:100%;padding:0 20px;line-height:89px}
 section{padding:60px 0 80px;overflow:hidden}
 .container{width:1000px;margin:0 auto;padding:0 20px;clear:both;overflow:hidden}
 #reasons{margin-top:40px}
@@ -51,9 +51,8 @@ b,strong,bold{font-weight:700}
 .icon-twitter:before{content:"\e005"}
 .icon-googleplus:before{content:"\e006"}
 .icon-github:before{content:"\e007"}
-@media screen and (max-width: 1040px){.container{width:700px}
-.box{width:45%}
-}@media screen and (max-width: 600px){.container,.box{width:100%;margin-right:0;margin-left:0;box-sizing:border-box}
+@media screen and (max-width: 600px){h1{font-size:28px}
+.container,.box-reason,.box-speaker{width:100%;box-sizing:border-box}
 .logo,nav{display:none}
 header{position:absolute}
 .button{width:100%;box-sizing:border-box}
