@@ -280,19 +280,3 @@ bold {
     box-sizing: border-box;
   }
 }
-#section-2 {
-  display: none;
-}
-#section-3 {
-  display: none;
-}
-.button,
-header {
-  display: none;
-}
-body {
-  padding-top: 0px;
-}
-.hide {
-  display: inline;
-}
