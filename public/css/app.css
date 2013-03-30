@@ -28,6 +28,9 @@ header nav ul li a {
 header nav ul li a:hover {
   color: #2ba6d4;
 }
+header nav ul .icon {
+  margin-right: 10px;
+}
 .button {
   color: #fff;
   background-color: #207c9f;
@@ -129,8 +132,8 @@ bold {
 }
 @font-face {
   font-family: 'uxdesignday';
-  src: url("fonts/uxdesignday.eot");
-  src: url("fonts/uxdesignday.eot?#iefix") format('embedded-opentype'), url("fonts/uxdesignday.woff") format('woff'), url("fonts/uxdesignday.ttf") format('truetype'), url("fonts/uxdesignday.svg#uxdesignday") format('svg');
+  src: url("../fonts/uxdesignday.eot");
+  src: url("../fonts/uxdesignday.eot?#iefix") format('embedded-opentype'), url("../fonts/uxdesignday.woff") format('woff'), url("../fonts/uxdesignday.ttf") format('truetype'), url("../fonts/uxdesignday.svg#uxdesignday") format('svg');
   font-weight: normal;
   font-style: normal;
 }
