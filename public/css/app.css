@@ -35,7 +35,7 @@ header nav ul li:last-child{margin-right:0}
 header nav ul li a{color:#222;font-weight:600;}
 header nav ul li a:hover{color:#2ba6d4}
 header nav ul .icon{margin-right:10px}
-header .nav-logo{background-image:url("../img/navlogo.png");width:60px;height:60px;background-size:cover;margin-right:40px;float:left;margin-top:20px}
+header .nav-logo{background-image:url("../img/navlogo@2x.png");width:60px;height:60px;background-size:cover;margin-right:40px;float:left;margin-top:20px}
 .button{color:#fff;background-color:#207c9f;padding:30px 40px 30px 100px;font-size:20px;font-weight:700;text-transform:uppercase;margin:20px 0;box-shadow:10px 10px 0 #15536a;transition:background-color 100ms,margin 100ms,box-shadow 100ms;position:relative;float:left;text-align:center;}
 .button:hover{background-color:#2283a7;color:#fff}
 .button:active{box-shadow:none;margin:30px 0 10px 10px}
