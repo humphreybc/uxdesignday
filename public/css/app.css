@@ -60,7 +60,7 @@ section{padding:60px 0 80px;overflow:hidden}
 footer ul{margin:30px auto 20px;text-align:center;}
 footer ul li{color:#666;font-size:11px;font-weight:600;margin:5px 0;}
 footer ul li a:hover{color:#207c9f}
-@media screen and (max-width: 600px){h1{font-size:28px}
+@media screen and (max-width: 600px){body{font-size:16px}
 .container,.box-reason,.box-speaker{width:100%;box-sizing:border-box}
 .logo,nav{display:none}
 header{position:absolute}
