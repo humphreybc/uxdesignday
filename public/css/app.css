@@ -57,7 +57,7 @@ section{padding:60px 0 80px;overflow:hidden}
 .social li .icon-twitter{color:#0099ec}
 .social li .icon-facebook{color:#2d4785}
 .social li .icon-github{color:#333}
-footer ul{margin:30px auto 100px;text-align:center;}
+footer ul{margin:30px auto 20px;text-align:center;}
 footer ul li{color:#666;font-size:11px;font-weight:600;margin:5px 0;}
 footer ul li a:hover{color:#207c9f}
 @media screen and (max-width: 600px){h1{font-size:28px}
