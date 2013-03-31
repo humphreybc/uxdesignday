@@ -12,7 +12,7 @@
 .icon-more:before{content:"\e008"}
 body{background-color:#fff;font-family:'Open Sans',sans-serif;color:#222;padding:80px 0 0;margin:0;font-size:20px;-webkit-font-smoothing:antialiased}
 .logo{background-image:url("../img/logo.png");background-size:cover;width:220px;height:200px;margin-left:80px}
-.gap{height:40px;clear:both;overflow:hidden}
+.gap{height:2em;clear:both;overflow:hidden}
 .center{text-align:center}
 .left{float:left}
 .right{float:right}
@@ -21,8 +21,8 @@ body{background-color:#fff;font-family:'Open Sans',sans-serif;color:#222;padding
 .black{background-color:#222;color:#fff}
 .gray{background-color:#f7f6f5}
 h1{font-size:1.8em;line-height:45px;font-weight:600;margin:0 0 40px;letter-spacing:-1px}
-h2{font-size:1.4em;font-weight:600;margin:0 0}
-h3{font-size:.75em;margin:5px 0}
+h2{font-size:1.3em;font-weight:600;margin:0 0}
+h3{font-size:.9em;margin:5px 0;font-weight:600}
 p{font-size:1em;font-weight:400;line-height:30px}
 a{text-decoration:none;color:#2ba6d4;}
 a:hover{color:#40afd8}
@@ -44,14 +44,14 @@ header .nav-logo{background-image:url("../img/navlogo@2x.png");width:60px;height
 section{padding:60px 0 80px;overflow:hidden}
 .container{width:1000px;margin:0 auto;padding:0 20px;clear:both;overflow:hidden}
 #reasons{margin-top:40px}
-.box{float:left;width:320px;padding:20px;margin:0 20px 20px 0;box-sizing:border-box;}
+.box{float:left;width:320px;margin:0 20px 20px 0;box-sizing:border-box;}
 .box:last-child{margin-right:0}
-.box-reason{background-color:rgba(255,255,255,0.1);transition:background-color 250ms;cursor:default;}
+.box-reason{background-color:rgba(255,255,255,0.1);transition:background-color 250ms;cursor:default;padding:20px;}
 .box-reason:hover{background-color:rgba(255,255,255,0.15)}
-.box-lightning{width:150px}
+.box-lightning{width:150px;text-align:center}
 .box-speaker h2{margin:5px 0 0}
-.box-speaker p{margin-top:5px;font-size:15px;line-height:22px}
-.social{margin:0 auto;text-align:center;}
+.box-speaker p{margin-top:5px;font-size:.8em;line-height:1.5em}
+.social{text-align:center;}
 .social li{display:inline;margin:0 5px;}
 .social li a{font-size:48px;color:#fff;opacity:.9;transition:opacity 250ms;}
 .social li a:hover{opacity:1}
@@ -59,12 +59,13 @@ section{padding:60px 0 80px;overflow:hidden}
 .social li .icon-facebook{color:#2d4785}
 .social li .icon-github{color:#333}
 footer ul{margin:30px auto 20px;text-align:center;}
-footer ul li{color:#666;font-size:11px;font-weight:600;margin:5px 0;}
+footer ul li{color:#666;font-size:.6em;font-weight:600;margin:5px 0;}
 footer ul li a:hover{color:#207c9f}
 @media screen and (max-width: 600px){body{font-size:16px}
-.container,.box-reason,.box-speaker{width:100%;box-sizing:border-box}
+.container,.box-reason,.box-speaker,.box-lightning{width:100%;box-sizing:border-box}
 .logo,nav{display:none}
 header{position:absolute}
 .button{width:100%;box-sizing:border-box}
-.box-speaker img{width:100%}
+.box-speaker img,.box-lightning img{width:100%}
+#section-3 .container img{margin:10px auto;display:block}
 }
