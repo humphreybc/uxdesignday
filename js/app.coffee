@@ -31,7 +31,7 @@ $(window).load ->
         timeout = setTimeout ->
           timeout = null
           checkOffset scrollTop
-        , 250
+        , 150
 
 checkOffset = (scrollTop) ->
     breakLoop = false;

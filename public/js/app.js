@@ -38,7 +38,7 @@
           return timeout = setTimeout(function() {
             timeout = null;
             return checkOffset(scrollTop);
-          }, 250);
+          }, 150);
         }
       });
     }
