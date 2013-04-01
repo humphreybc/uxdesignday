@@ -42,7 +42,7 @@ header .nav-logo{background-image:url("../img/navlogo.png");width:60px;height:60
 .button:hover{background-color:#2283a7;color:#fff}
 .button:active{box-shadow:none;margin:30px 0 10px 10px}
 .button .button-inner{background-color:#1e7597;position:absolute;left:0;top:0;height:100%;padding:0 20px;line-height:89px}
-section{padding:60px 0 80px;overflow:hidden}
+section{padding:60px 0;overflow:hidden}
 .container{width:1000px;margin:0 auto;padding:0 20px;clear:both;overflow:hidden}
 #reasons{margin-top:40px}
 .box{float:left;width:280px;margin:0 20px 20px 0;}
@@ -66,7 +66,7 @@ footer ul li a:hover{color:#207c9f}
 .resource-section h1{margin-bottom:0}
 .resource-section p{margin-bottom:40px}
 .resources{margin-top:20px;width:100%;overflow:hidden;}
-.resources li{width:50%;float:left;min-height:450px;}
+.resources li{margin-bottom:20px;width:50%;float:left;}
 .resources li h2{margin-bottom:20px}
 .resources li a{float:left;clear:left;font-size:.75em;color:#222;padding:5px 0;transition:padding 150ms;}
 .resources li a:hover{color:#2ba6d4;padding:5px 0 5px 5px}
