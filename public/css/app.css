@@ -70,7 +70,7 @@ footer ul li a:hover{color:#207c9f}
 .resources li h2{margin-bottom:20px}
 .resources li a{float:left;clear:left;font-size:.75em;color:#222;padding:5px 0;transition:padding 150ms;}
 .resources li a:hover{color:#2ba6d4;padding:5px 0 5px 5px}
-@media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi){header .nav-logo{background-image:url("img/navlogo@2x.png")}
+@media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi){header .nav-logo{background-image:url("../img/navlogo@2x.png")}
 }@media screen and (max-width: 600px){body{font-size:17px}
 .container,.box-reason,.box-speaker,.box-lightning{width:100%;box-sizing:border-box}
 .logo,nav{display:none}
