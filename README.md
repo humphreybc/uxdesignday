@@ -6,9 +6,6 @@ Source code for uxdesignday.org - static HTML, CSS, and a little bit of JS.
 
 ### Todo
 
-* Turn off JS for mobile
-* Mobile responsive fixes
-* Test in IE, Opera, Firefox
 * Add sponsors
 * Add speakers
 
