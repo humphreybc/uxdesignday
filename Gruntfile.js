@@ -4,12 +4,12 @@ module.exports = function(grunt) {
     coffee: {
       scripts: {
         files: {
-          './public/js/app.js': './js/app.coffee'
+          'public/js/app.js': 'js/app.coffee'
         }
       }
     },
     coffeelint: {
-      app: ['./*.coffee'],
+      app: ['*.coffee'],
       options: {
         indentation: {
           value: 2,
@@ -23,22 +23,24 @@ module.exports = function(grunt) {
     },
     stylus: {
       compile: {
-        files: {'./public/css/app.css': './css/app.styl'}
+        files: {'public/css/app.css': 'css/app.styl'}
       }
     },
     watch: {
       scripts: {
-        files: './js/*.coffee',
-        tasks: ['coffeelint', 'coffee:scripts']
+        files: 'js/*.coffee',
+        tasks: ['coffeelint', 'coffee:scripts', 'uglify:app']
       },
       styles: {
-        files: './css/**/*.styl',
+        files: 'css/**/*.styl',
         tasks: ['stylus']
       }
     },
     uglify: {
-      scripts: {
-        files: './js/*.coffee',
+      app: {
+        files: {
+          'public/js/app.min.js': ['public/js/app.js'],
+        }
       }
     }
   });
