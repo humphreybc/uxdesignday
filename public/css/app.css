@@ -73,7 +73,7 @@ footer ul li a:hover{color:#207c9f}
 .logo,nav{display:none}
 header{position:absolute}
 .button{width:100%;box-sizing:border-box}
-.box-speaker img,.box-lightning img{width:100%}
+.box-speaker img,.box-lightning img{width:100%;height:auto}
 #section-3 .container img{margin:10px auto;display:block}
 .resources li{width:100%}
 }
