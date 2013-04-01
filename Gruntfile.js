@@ -35,8 +35,12 @@ module.exports = function(grunt) {
         files: './css/**/*.styl',
         tasks: ['stylus']
       }
+    },
+    uglify: {
+      scripts: {
+        files: './js/*.coffee',
+      }
     }
-
   });
 
   grunt.loadNpmTasks('grunt-contrib-coffee');
@@ -44,6 +48,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-stylus');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
   grunt.registerTask('default', []);
 
