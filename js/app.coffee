@@ -10,8 +10,15 @@ $(document).ready ->
       scrollTop: ($($(this).attr('href')).offset().top) - 100
     , 500, ->
       checkOffset $(window).scrollTop()
-      animating = false;
+      animating = false
     false
+
+
+  $('#resource-roulette').click (e) ->
+    e.preventDefault()
+    resourceLinks = $('.resources a').get()
+    resourceTab = window.open resourceLinks[Math.floor(Math.random() * resourceLinks.length)].getAttribute('href'), '_blank'
+    #resourceTab.focus()
 
 if document.body.clientWidth > 600
   $(window).load ->
