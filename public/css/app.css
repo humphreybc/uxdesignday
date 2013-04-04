@@ -56,8 +56,8 @@ section{padding:60px 0;overflow:hidden}
 .box-speaker h2{margin:5px 0 0}
 .box-speaker p{margin-top:5px;font-size:.8em;line-height:1.5em}
 .sponsor-section{min-height:500px;}
-.sponsor-section img{padding:20px 45px 20px;transition:padding 250ms;}
-.sponsor-section img:hover{padding:0 45px 40px}
+.sponsor-section img{padding:20px 40px 20px;transition:padding 250ms;border:none;}
+.sponsor-section img:hover{padding:0 40px 40px}
 .social{text-align:center;}
 .social li{display:inline;margin:0 5px;}
 .social li a{font-size:48px;color:#fff;opacity:.9;transition:opacity 250ms;}
