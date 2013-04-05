@@ -33,7 +33,7 @@ body{background:#fff;font-family:'Open Sans',sans-serif;color:#222;padding:80px 
 .icon-github:hover{color:#404040}
 h1{font-size:1.8em;line-height:1.4em;font-weight:600;margin:0 0 40px;letter-spacing:-1px}
 h2{font-size:1.3em;font-weight:600;margin:0 0}
-h3{font-size:.9em;margin:5px 0;font-weight:600}
+h3{font-size:.9em;margin:5px 0 0;font-weight:600}
 p{font-size:1em;font-weight:400;line-height:30px}
 a{text-decoration:none;color:#2ba6d4;}
 a:hover{color:#40afd8}
@@ -65,9 +65,9 @@ section{padding:60px 0;overflow:hidden}
 .box-last{margin:0 0 20px 0}
 .box-reason{background-color:#38abd7;transition:background-color 250ms;cursor:default;padding:20px;min-height:200px;}
 .box-reason:hover{background-color:#40afd8}
-.box-lightning{width:150px;}
-.box-lightning h3{margin-bottom:0}
-.box-lightning a{font-size:.75em;margin:0;line-height:1.2em;color:#808080;transition:color 250ms;}
+.box-lightning{width:235px;}
+.box-lightning h3{margin-bottom:-5px}
+.box-lightning a{font-size:.75em;margin:0;color:#808080;transition:color 250ms;}
 .box-lightning a:hover{color:#2ba6d4}
 .box-speaker{width:320px;}
 .box-speaker h2{margin:5px 0 0}
