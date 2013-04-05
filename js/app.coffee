@@ -4,7 +4,7 @@ linkOffsets = []
 $(document).ready ->
   console.log 'Like looking under the hood? Feel free to help make this site better at https://github.com/humphreybc/uxdesignday'
 
-  $('#header a').click ->
+  $('nav a').click ->
     animating = true
     $('html, body').animate
       scrollTop: ($($(this).attr('href')).offset().top) - 100
@@ -13,6 +13,9 @@ $(document).ready ->
       animating = false
     false
 
+  $('#header-share').click (e) ->
+    e.preventDefault()
+    $('#share-box').css('top', '0px')
 
   $('#resource-roulette').click (e) ->
     e.preventDefault()

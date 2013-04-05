@@ -21,6 +21,16 @@ body{background:#fff;font-family:'Open Sans',sans-serif;color:#222;padding:80px 
 .blue-section{background-color:#2ba6d4;color:#fff}
 .black-section{background-color:#222;color:#fff}
 .gray-section{background-color:#f7f6f5}
+.overflow{overflow:hidden}
+.icon-twitter,.icon-facebook,icon-googleplus,icon-github{transition:color 250ms}
+.icon-twitter{color:#0099ec;}
+.icon-twitter:hover{color:#06a8ff}
+.icon-facebook{color:#2d4785;}
+.icon-facebook:hover{color:#335198}
+.icon-googleplus{color:#c43b2b;}
+.icon-googleplus:hover{color:#d34636}
+.icon-github{color:#333;}
+.icon-github:hover{color:#404040}
 h1{font-size:1.8em;line-height:1.4em;font-weight:600;margin:0 0 40px;letter-spacing:-1px}
 h2{font-size:1.3em;font-weight:600;margin:0 0}
 h3{font-size:.9em;margin:5px 0;font-weight:600}
@@ -30,7 +40,7 @@ a:hover{color:#40afd8}
 a.active{color:#207c9f}
 ul{margin:0;padding:0;list-style-type:none}
 b,strong,bold{font-weight:700}
-header{height:100px;position:fixed;top:0;left:0;overflow:hidden;z-index:150;width:100%;}
+header{height:100px;position:fixed;top:0;left:0;z-index:150;width:100%;}
 header nav ul{padding:35px 0 0;margin:0;float:left;}
 header nav ul li{float:left;display:inline-block;list-style-type:none;margin-right:40px;}
 header nav ul li:last-child{margin-right:0}
@@ -40,12 +50,16 @@ header nav ul .icon{margin-right:10px}
 header .nav-logo{background-image:url("../img/navlogo.png");width:60px;height:60px;background-size:cover;margin-right:40px;float:left;margin-top:20px}
 header #header-share{margin-top:39px;float:right;color:#808080;font-weight:600;font-size:.8em;}
 header #header-share:hover{color:#222}
+#share-box{position:absolute;z-index:100;right:0;top:0;height:60px;text-align:center;padding:20px;line-height:75px;}
+#share-box ul li{display:inline;margin:0 3px;}
+#share-box ul li:last-child{margin-right:0}
+#share-box ul li a{font-size:1.5em}
 .button{color:#fff;background-color:#207c9f;padding:30px 40px 30px 100px;font-size:1em;font-weight:700;text-transform:uppercase;margin:20px 0;box-shadow:10px 10px 0 #15536a;transition:background-color 100ms,margin 100ms,box-shadow 100ms;position:relative;float:left;}
 .button:hover{background-color:#2283a7;color:#fff}
 .button:active{box-shadow:none;margin:30px 0 10px 10px}
 .button .button-inner{background-color:#1e7597;position:absolute;left:0;top:0;height:100%;padding:0 20px;line-height:89px}
 section{padding:60px 0;overflow:hidden}
-.container{width:1000px;margin:0 auto;padding:0 20px;clear:both;overflow:hidden}
+.container{width:1000px;margin:0 auto;padding:0 20px;clear:both;position:relative}
 #reasons{margin-top:40px}
 .box{float:left;width:280px;margin:0 20px 20px 0;}
 .box-last{margin:0 0 20px 0}
@@ -63,11 +77,7 @@ section{padding:60px 0;overflow:hidden}
 .sponsor-section img:hover{padding:0 40px 40px}
 .social{text-align:center;}
 .social li{display:inline;margin:0 5px;}
-.social li a{font-size:48px;color:#fff;opacity:.9;transition:opacity 250ms;}
-.social li a:hover{opacity:1}
-.social li .icon-twitter{color:#0099ec}
-.social li .icon-facebook{color:#2d4785}
-.social li .icon-github{color:#333}
+.social li a{font-size:48px;opacity:.9;transition:opacity 250ms}
 footer ul{margin:30px auto 20px;text-align:center;}
 footer ul li{color:#666;font-size:.6em;font-weight:600;margin:5px 0;}
 footer ul li a:hover{color:#207c9f}

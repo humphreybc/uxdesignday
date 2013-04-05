@@ -7,7 +7,7 @@
 
   $(document).ready(function() {
     console.log('Like looking under the hood? Feel free to help make this site better at https://github.com/humphreybc/uxdesignday');
-    $('#header a').click(function() {
+    $('nav a').click(function() {
       animating = true;
       $('html, body').animate({
         scrollTop: ($($(this).attr('href')).offset().top) - 100
@@ -16,6 +16,10 @@
         return animating = false;
       });
       return false;
+    });
+    $('#header-share').click(function(e) {
+      e.preventDefault();
+      return $('#share-box').css('top', '0px');
     });
     return $('#resource-roulette').click(function(e) {
       var resourceLinks, resourceTab;
