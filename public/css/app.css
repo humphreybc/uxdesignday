@@ -50,11 +50,12 @@ section{padding:60px 0;overflow:hidden}
 .box-reason{background-color:#38abd7;transition:background-color 250ms;cursor:default;padding:20px;min-height:200px;}
 .box-reason:hover{background-color:#40afd8}
 .box-lightning{width:150px;}
-.box-lightning h3{margin-bottom:2px}
-.box-lightning p{font-size:.75em;margin:0;line-height:1.2em;color:#808080}
+.box-lightning h3{margin-bottom:0}
+.box-lightning a{font-size:.75em;margin:0;line-height:1.2em;color:#808080;transition:color 250ms;}
+.box-lightning a:hover{color:#2ba6d4}
 .box-speaker{width:320px;}
 .box-speaker h2{margin:5px 0 0}
-.box-speaker p{margin-top:5px;font-size:.8em;line-height:1.5em}
+.box-speaker a{margin-top:5px;font-size:.8em;line-height:1.5em}
 .sponsor-section{min-height:500px;}
 .sponsor-section img{padding:20px 40px 20px;transition:padding 250ms;border:none;}
 .sponsor-section img:hover{padding:0 40px 40px}
