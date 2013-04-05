@@ -60,7 +60,7 @@ header #header-share:hover{color:#222}
 .button .button-inner{background-color:#1e7597;position:absolute;left:0;top:0;height:100%;padding:0 20px;line-height:89px}
 section{padding:60px 0;overflow:hidden}
 .container{width:1000px;margin:0 auto;padding:0 20px;clear:both;position:relative}
-#reasons{margin-top:40px}
+#reasons{margin-top:40px;margin-bottom:0;overflow:hidden}
 .box{float:left;width:280px;margin:0 20px 20px 0;}
 .box-last{margin:0 0 20px 0}
 .box-reason{background-color:#38abd7;transition:background-color 250ms;cursor:default;padding:20px;min-height:200px;}
