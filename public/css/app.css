@@ -47,7 +47,8 @@ header nav ul li:last-child{margin-right:0}
 header nav ul li a{color:#222;font-weight:600;font-size:.8em;}
 header nav ul li a:hover{color:#2ba6d4}
 header nav ul .icon{margin-right:10px}
-header .nav-logo{background-image:url("../img/navlogo.png");width:60px;height:60px;background-size:cover;margin-right:40px;float:left;margin-top:20px}
+header .nav-logo{background-image:url("../img/navlogo.png");width:60px;height:60px;background-size:cover;margin:20px 40px 0 0;float:left;transition:margin 150ms;}
+header .nav-logo:hover{margin:15px 40px 5px 0;opacity:.9}
 header #header-share{margin-top:39px;float:right;color:#808080;font-weight:600;font-size:.8em;}
 header #header-share:hover{color:#222}
 #share-box{position:absolute;z-index:100;right:0;top:0;height:60px;text-align:center;padding:20px;line-height:75px;}
