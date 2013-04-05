@@ -17,10 +17,6 @@
       });
       return false;
     });
-    $('#header-share').click(function(e) {
-      e.preventDefault();
-      return $('#share-box').css('top', '0px');
-    });
     return $('#resource-roulette').click(function(e) {
       var resourceLinks, resourceTab;
       e.preventDefault();

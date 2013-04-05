@@ -13,10 +13,6 @@ $(document).ready ->
       animating = false
     false
 
-  $('#header-share').click (e) ->
-    e.preventDefault()
-    $('#share-box').css('top', '0px')
-
   $('#resource-roulette').click (e) ->
     e.preventDefault()
     resourceLinks = $('.resources a').get()
