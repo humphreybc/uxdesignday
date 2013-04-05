@@ -38,6 +38,8 @@ header nav ul li a{color:#222;font-weight:600;font-size:.8em;}
 header nav ul li a:hover{color:#2ba6d4}
 header nav ul .icon{margin-right:10px}
 header .nav-logo{background-image:url("../img/navlogo.png");width:60px;height:60px;background-size:cover;margin-right:40px;float:left;margin-top:20px}
+header #header-share{margin-top:39px;float:right;color:#808080;font-weight:600;font-size:.8em;}
+header #header-share:hover{color:#222}
 .button{color:#fff;background-color:#207c9f;padding:30px 40px 30px 100px;font-size:1em;font-weight:700;text-transform:uppercase;margin:20px 0;box-shadow:10px 10px 0 #15536a;transition:background-color 100ms,margin 100ms,box-shadow 100ms;position:relative;float:left;}
 .button:hover{background-color:#2283a7;color:#fff}
 .button:active{box-shadow:none;margin:30px 0 10px 10px}
@@ -79,7 +81,7 @@ footer ul li a:hover{color:#207c9f}
 @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi){header .nav-logo{background-image:url("../img/navlogo@2x.png")}
 }@media screen and (max-width: 600px){body{font-size:18px}
 .container,.box-reason,.box-speaker,.box-lightning{width:100%;box-sizing:border-box}
-.logo,nav{display:none}
+.logo,nav,#header-share{display:none}
 header{position:absolute}
 .button{width:100%;box-sizing:border-box}
 .box-speaker img,.box-lightning img{width:100%;height:auto}
