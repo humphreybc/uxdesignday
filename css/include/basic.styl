@@ -16,60 +16,22 @@ body
   height 200px
   margin-left 170px
 
-.gap
-  height 2em
-  clear both
-  overflow hidden
-
-.center
-  text-align center
-
-.left
-  float left
-
-.right
-  float right
-
-.hide
-  display none
-
-.blue-section
-  background-color blue
-  color white
-
-.black-section
-  background-color black
-  color white
-
-.gray-section
-  background-color #f7f6f5
-
-.overflow
-  overflow hidden
-
-.icon-twitter, .icon-facebook, icon-googleplus, icon-github
+// A function that sets global properties with a dynamic color
+set-color(color)
+  color color
   transition color 250ms
 
-.icon-twitter
-  color twitterBlue
-
   &:hover
-    color lighten(twitterBlue, 5)
+    color lighten(color, 10)
+
+.icon-twitter
+  set-color twitterBlue
 
 .icon-facebook
-  color facebookBlue
-
-  &:hover
-    color lighten(facebookBlue, 5)
+  set-color facebookBlue
 
 .icon-googleplus
-  color googleRed
-
-  &:hover
-    color lighten(googleRed, 5)
+  set-color googleRed
 
 .icon-github
-  color #333
-
-  &:hover
-    color lighten(#333, 5)
+  set-color #333
