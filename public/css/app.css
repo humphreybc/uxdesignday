@@ -89,6 +89,18 @@ footer ul li a:hover{color:#207c9f}
 .resources li h2{margin-bottom:20px}
 .resources li a{float:left;clear:left;font-size:.75em;color:#222;padding:5px 0;transition:padding 150ms;}
 .resources li a:hover{color:#2ba6d4;padding:5px 0 5px 5px}
+.tooltip{position:absolute;z-index:200;display:block;visibility:visible;font-size:.6em;line-height:1.4;opacity:0;border-radius:6px;transition:opacity 500ms;}
+.tooltip.in{opacity:1}
+.tooltip.top{margin-top:-3px;padding:5px 0}
+.tooltip.right{margin-left:3px;padding:0 5px}
+.tooltip.bottom{margin-top:3px;padding:5px 0}
+.tooltip.left{margin-left:-3px;padding:0 5px}
+.tooltip-inner{max-width:400px;padding:8px;color:#fff;text-align:center;text-decoration:none;background-color:rgba(0,0,0,0.9);border-radius:6px;font-weight:600}
+.tooltip-arrow{position:absolute;width:0;height:0;border-color:transparent;border-style:solid}
+.tooltip.top .tooltip-arrow{bottom:0;left:50%;margin-left:-5px;border-width:5px 5px 0;border-top-color:rgba(0,0,0,0.9)}
+.tooltip.right .tooltip-arrow{top:50%;left:0;margin-top:-5px;border-width:5px 5px 5px 0;border-right-color:rgba(0,0,0,0.9)}
+.tooltip.left .tooltip-arrow{top:50%;right:0;margin-top:-5px;border-width:5px 0 5px 5px;border-left-color:rgba(0,0,0,0.9)}
+.tooltip.bottom .tooltip-arrow{top:0;left:50%;margin-left:-5px;border-width:0 5px 5px;border-bottom-color:rgba(0,0,0,0.9)}
 @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi){header .nav-logo{background-image:url("../img/navlogo@2x.png")}
 }@media screen and (max-width: 600px){body{font-size:18px}
 .container,.box-reason,.box-speaker,.box-lightning{width:100%;box-sizing:border-box}
