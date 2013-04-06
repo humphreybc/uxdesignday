@@ -39,7 +39,7 @@ module.exports = function(grunt) {
     uglify: {
       app: {
         files: {
-          'public/js/app.min.js': ['public/js/app.js'],
+          'public/js/app.min.js': ['public/js/app.js', 'public/js/bootstrap-tooltip.js'],
         }
       }
     }
@@ -61,6 +61,7 @@ module.exports = function(grunt) {
   grunt.registerTask('build', [
     'coffeelint',
     'coffee',
-    'stylus'
+    'stylus',
+    'uglify'
   ]);
 };
