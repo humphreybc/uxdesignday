@@ -11,7 +11,7 @@
       placement: 'bottom',
       delay: {
         show: 500,
-        hide: 0
+        hide: 250
       }
     });
     $('nav a').click(function() {
