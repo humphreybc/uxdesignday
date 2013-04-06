@@ -59,8 +59,8 @@ header #header-share:hover{color:#222}
 .button:hover{background-color:#2283a7;color:#fff}
 .button:active{box-shadow:none;margin:30px 0 10px 10px}
 .button .button-inner{background-color:#1e7597;position:absolute;left:0;top:0;height:100%;padding:0 20px;line-height:89px}
-section{padding:60px 0;overflow:hidden}
-.container{width:1000px;margin:0 auto;padding:0 20px;clear:both;position:relative}
+section{padding:60px 0;min-width:1040px}
+.container{width:1000px;margin:0 auto;padding:0 20px}
 #reasons{margin-top:40px;margin-bottom:0;overflow:hidden}
 .box{float:left;width:280px;margin:0 20px 20px 0;}
 .box-last{margin:0 0 20px 0}
@@ -102,6 +102,7 @@ footer ul li a:hover{color:#207c9f}
 }@media screen and (max-width: 600px){body{font-size:18px}
 .container,.box,.box-reason,.button,.box-speaker img,.resources li{width:100%;box-sizing:border-box;-moz-box-sizing:border-box}
 header{position:absolute}
+section{min-width:0}
 .box-speaker img{height:auto}
 .sponsor-section .container img{margin:30px auto;display:block;padding:0}
 .logo,#nav-links,#header-share{display:none}
