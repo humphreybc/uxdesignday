@@ -7,13 +7,15 @@
 
   $(document).ready(function() {
     console.log('Like looking under the hood? Feel free to help make this site better at https://github.com/humphreybc/uxdesignday');
-    $('[rel=tooltip]').tooltip({
-      placement: 'bottom',
-      delay: {
-        show: 500,
-        hide: 250
-      }
-    });
+    if (document.body.clientWidth > 600) {
+      $('[rel=tooltip]').tooltip({
+        placement: 'bottom',
+        delay: {
+          show: 500,
+          hide: 250
+        }
+      });
+    }
     $('nav a').click(function() {
       animating = true;
       $('html, body').animate({
