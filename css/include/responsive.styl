@@ -4,6 +4,11 @@
   header .nav-logo
     background-image url('../img/navlogo@2x.png')
 
+@media screen and (max-width: 980px)
+
+  header
+    position absolute
+
 // Responsiveness for mobile
 
 @media screen and (max-width: 600px)
@@ -16,8 +21,8 @@
     box-sizing border-box
     -moz-box-sizing border-box
 
-  header
-    position absolute
+  header .container
+    width 100%
 
   section
     min-width 0

@@ -11,7 +11,7 @@
 .icon-github:before{content:"\e007"}
 .icon-flickr:before{content:"\e008"}
 .icon-book:before{content:"\e009"}
-body{background:#fff;font-family:'Open Sans',sans-serif;color:#222;padding:80px 0 0;margin:0;font-size:20px;-webkit-font-smoothing:antialiased}
+body{background:#f7f6f5;font-family:'Open Sans',sans-serif;color:#222;padding:100px 0 0;margin:0;font-size:20px;-webkit-font-smoothing:antialiased}
 .logo{background-image:url("../img/logo.png");background-size:cover;width:220px;height:200px;margin-left:170px}
 .icon-twitter{color:#0099ec;transition:#0099ec 250ms;}
 .icon-twitter:hover{color:#20b1ff}
@@ -26,6 +26,7 @@ body{background:#fff;font-family:'Open Sans',sans-serif;color:#222;padding:80px 
 .left{float:left}
 .right{float:right}
 .hide{display:none}
+.white-section{background-color:#fff}
 .blue-section{background-color:#2ba6d4;color:#fff}
 .black-section{background-color:#222;color:#fff}
 .gray-section{background-color:#f7f6f5}
@@ -40,6 +41,7 @@ a.active{color:#207c9f}
 ul{margin:0;padding:0;list-style-type:none}
 b,strong,bold{font-weight:700}
 header{height:100px;position:fixed;top:0;left:0;z-index:150;width:100%;}
+header .container{width:1000px}
 header nav ul{padding:35px 0 0;margin:0;float:left;}
 header nav ul li{float:left;display:inline-block;list-style-type:none;margin-right:40px;}
 header nav ul li:last-child{margin-right:0}
@@ -50,7 +52,7 @@ header .nav-logo{background-image:url("../img/navlogo.png");width:60px;height:60
 header .nav-logo:hover{margin:15px 40px 5px 0;opacity:.9}
 header #header-share{margin-top:39px;float:right;color:#808080;font-weight:600;font-size:.8em;}
 header #header-share:hover{color:#222}
-#share-box{position:absolute;z-index:100;right:0;top:0;height:60px;text-align:center;padding:20px;line-height:75px;}
+#share-box{float:right;z-index:100;height:60px;text-align:center;padding:20px 0 20px 20px;line-height:75px;}
 #share-box ul{cursor:normal}
 #share-box li{display:inline;margin:0 3px;}
 #share-box li:last-child{margin-right:0}
@@ -59,14 +61,14 @@ header #header-share:hover{color:#222}
 .button:hover{background-color:#2283a7;color:#fff}
 .button:active{box-shadow:none;margin:30px 0 10px 10px}
 .button .button-inner{background-color:#1e7597;position:absolute;left:0;top:0;height:100%;padding:0 20px;line-height:89px}
-section{padding:60px 0;min-width:1040px}
-.container{width:1000px;margin:0 auto;padding:0 20px}
+section{padding:40px 0;clear:both;min-width:1040px}
+.container{width:1000px;margin:0 auto;padding:0 20px;position:relative}
 #reasons{margin-top:40px;margin-bottom:0;overflow:hidden}
 .box{float:left;width:280px;margin:0 20px 20px 0;}
 .box-last{margin:0 0 20px 0}
 .box-reason{background-color:#38abd7;transition:background-color 250ms;cursor:default;padding:20px;min-height:200px;}
 .box-reason:hover{background-color:#40afd8}
-.box-speaker{width:235px;}
+.box-speaker{width:235px;margin-bottom:40px;}
 .box-speaker h3{margin-bottom:-5px}
 .box-speaker a{font-size:.75em;margin:0;color:#808080;transition:color 250ms;}
 .box-speaker a:hover{color:#2ba6d4}
@@ -99,9 +101,10 @@ footer ul li a:hover{color:#207c9f}
 .tooltip.left .tooltip-arrow{top:50%;right:0;margin-top:-5px;border-width:5px 0 5px 5px;border-left-color:rgba(0,0,0,0.9)}
 .tooltip.bottom .tooltip-arrow{top:0;left:50%;margin-left:-5px;border-width:0 5px 5px;border-bottom-color:rgba(0,0,0,0.9)}
 @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi){header .nav-logo{background-image:url("../img/navlogo@2x.png")}
+}@media screen and (max-width: 980px){header{position:absolute}
 }@media screen and (max-width: 600px){body{font-size:18px}
 .container,.box,.box-reason,.button,.box-speaker img,.resources li{width:100%;box-sizing:border-box;-moz-box-sizing:border-box}
-header{position:absolute}
+header .container{width:100%}
 section{min-width:0}
 .box-speaker img{height:auto}
 .sponsor-section .container img{margin:30px auto;display:block;padding:0}
