@@ -2,12 +2,7 @@ UX Design Day
 =============
 [beta.uxdesignday.org](http://beta.uxdesignday.org)
 
-Source code for uxdesignday.org - static HTML, CSS, and a little bit of JS.
-
-### Todo
-
-* Add sponsors
-* Add speakers
+Source code for uxdesignday.org - static HTML, CSS, and a little bit of JS. Founded, designed, and predominantly built by Benjamin Humphrey with some help from Sam Tran, and Dave Strydom for the resources list.
 
 ### Dependencies
 
