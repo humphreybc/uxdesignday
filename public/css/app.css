@@ -63,6 +63,8 @@ header #header-share:hover{color:#222}
 .button .button-inner{background-color:#1e7597;position:absolute;left:0;top:0;height:100%;padding:0 20px;line-height:89px}
 section{padding:40px 0;clear:both;min-width:1040px}
 .container{width:1000px;margin:0 auto;padding:0 20px;position:relative}
+#event-details{float:left;margin:33px 0 0 40px;}
+#event-details p{font-size:.6em;line-height:.6em}
 #reasons{margin-top:40px;margin-bottom:0;overflow:hidden}
 .box{float:left;width:280px;margin:0 20px 20px 0;}
 .box-last{margin:0 0 20px 0}
@@ -104,6 +106,7 @@ footer ul li a:hover{color:#207c9f}
 }@media screen and (max-width: 980px){header{position:absolute}
 }@media screen and (max-width: 600px){body{font-size:18px}
 .container,.box,.box-reason,.button,.box-speaker img,.resources li{width:100%;box-sizing:border-box;-moz-box-sizing:border-box}
+#event-details{margin:0}
 header .container{width:100%}
 section{min-width:0}
 .box-speaker img{height:auto}
