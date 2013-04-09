@@ -59,7 +59,7 @@ header #header-share:hover{color:#222}
 #share-box li a{font-size:1.5em;transition:color 250ms}
 .button{color:#fff;background-color:#207c9f;padding:30px 40px 30px 100px;font-size:1em;font-weight:700;text-transform:uppercase;margin:20px 0;box-shadow:10px 10px 0 #15536a;transition:background-color 100ms,margin 100ms,box-shadow 100ms;position:relative;float:left;}
 .button:hover{background-color:#2283a7;color:#fff}
-.button:active{box-shadow:none;margin:30px 0 10px 10px}
+.button:active{box-shadow:none;margin:30px -10px 10px 10px}
 .button .button-inner{background-color:#1e7597;position:absolute;left:0;top:0;height:100%;padding:0 20px;line-height:89px}
 section{padding:40px 0;clear:both;min-width:1040px}
 .container{width:1000px;margin:0 auto;padding:0 20px;position:relative}
