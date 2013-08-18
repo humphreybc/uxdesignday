@@ -2,12 +2,12 @@
   "name": "uxdesignday",
   "version": "0.0.0",
   "devDependencies": {
-    "coffee-script": "~1.4.0",
-    "grunt": "~0.4.0",
-    "grunt-contrib-watch": "~0.2.0",
-    "grunt-contrib-coffee": "~0.4.0",
-    "grunt-coffeelint": "0.0.6",
-    "grunt-contrib-stylus": "~0.4.0",
+    "coffee-script": "latest",
+    "grunt": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-contrib-coffee": "latest",
+    "grunt-coffeelint": "latest",
+    "grunt-contrib-stylus": "latest",
     "grunt-contrib-cssmin": "latest",
     "grunt-contrib-uglify": "latest"
   }
