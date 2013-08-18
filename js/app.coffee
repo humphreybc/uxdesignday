@@ -5,9 +5,9 @@ $(document).ready ->
   console.log 'Like looking under the hood? Feel free to help make this site better at https://github.com/humphreybc/uxdesignday'
 
   if document.body.clientWidth > 600
-    $('[rel=tooltip]').tooltip 
+    $('[rel=tooltip]').tooltip
       placement: 'bottom'
-      delay: 
+      delay:
         show: 500
         hide: 250
 
@@ -23,8 +23,7 @@ $(document).ready ->
   $('#resource-roulette').click (e) ->
     e.preventDefault()
     resourceLinks = $('.resources a').get()
-    resourceTab = window.open resourceLinks[Math.floor(Math.random() * resourceLinks.length)].getAttribute('href'), '_blank'
-    #resourceTab.focus()
+    window.open resourceLinks[Math.floor(Math.random() * resourceLinks.length)].getAttribute('href'), '_blank'
 
 if document.body.clientWidth > 600
   $(window).load ->
@@ -47,7 +46,6 @@ if document.body.clientWidth > 600
           , 100
 
   checkOffset = (scrollTop) ->
-      breakLoop = false;
       for link in linkOffsets
         return if link[1] is null
         if scrollTop + 10 > link[1]
@@ -55,5 +53,4 @@ if document.body.clientWidth > 600
           unless activeLink.hasClass 'active'
             $('a.active').removeClass 'active'
             activeLink.addClass 'active'
-          breakLoop = true
-        break if breakLoop
+          break

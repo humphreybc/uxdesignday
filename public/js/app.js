@@ -27,10 +27,10 @@
       return false;
     });
     return $('#resource-roulette').click(function(e) {
-      var resourceLinks, resourceTab;
+      var resourceLinks;
       e.preventDefault();
       resourceLinks = $('.resources a').get();
-      return resourceTab = window.open(resourceLinks[Math.floor(Math.random() * resourceLinks.length)].getAttribute('href'), '_blank');
+      return window.open(resourceLinks[Math.floor(Math.random() * resourceLinks.length)].getAttribute('href'), '_blank');
     });
   });
 
@@ -58,8 +58,7 @@
       });
     });
     checkOffset = function(scrollTop) {
-      var activeLink, breakLoop, link, _i, _len;
-      breakLoop = false;
+      var activeLink, link, _i, _len;
       for (_i = 0, _len = linkOffsets.length; _i < _len; _i++) {
         link = linkOffsets[_i];
         if (link[1] === null) {
@@ -71,9 +70,6 @@
             $('a.active').removeClass('active');
             activeLink.addClass('active');
           }
-          breakLoop = true;
-        }
-        if (breakLoop) {
           break;
         }
       }
