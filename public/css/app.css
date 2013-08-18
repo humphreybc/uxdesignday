@@ -117,3 +117,7 @@ section{min-width:0}
 .schedule h1{margin-bottom:0}
 .schedule h2{margin:20px 0 10px}
 .schedule td{padding:5px 40px 10px 0}
+.home{margin-top:120px;background-color:#222;padding:40px;}
+.home a .location{text-transform:uppercase;font-weight:900;font-size:96px;margin:0 20px;letter-spacing:-.05em}
+.home a .date{color:#444}
+.home a:hover{color:#ffa500}
