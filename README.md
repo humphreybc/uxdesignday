@@ -8,7 +8,6 @@ Source code for uxdesignday.org - static HTML, CSS, and a little bit of JS. Foun
 
 * Install Node on the server to do server-side compiling
 * Set up hooks instaed of using a cronjob to deploy
-* Change beta/master branch to be global, location agnostic
 * Set up Github Issues for tracking global problems / feature requests
 * Refactor all the things
 
@@ -56,7 +55,9 @@ A Gruntfile with a 'dev' task is available for development.
 
 ### Deploying
 
-Just push up your code after compiling. The server will pull down your branch and point to the /public folder. See the Structure section above for more info.
+Anything you push to the master branch will be live on uxdesignday.org and uxdesignday.com within 10 minutes of you pushing it. Only merge the your working branch into master when you're confident everything is looking peachy! You will also need to compile into the /public directory locally before pushing, so make sure you run 'grunt build' one final time. And make sure you've merged master into your working branch first to get any of the latest changes.
+
+The server will pull down your branch and point to the /public folder. See the Structure section above for more info.
 
 ### Questions?
 
