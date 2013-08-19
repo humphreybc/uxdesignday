@@ -27,30 +27,32 @@ $(document).ready ->
 
 if document.body.clientWidth > 600
   $(window).load ->
-      navLinks = $('#nav-links li a')
-      for item in navLinks
-        link = $(item).attr('href')
-        # ~~ forces integer context so we don't accidentally subtract in string context
-        linkOffsets.push([link, if typeof $(link).offset() is 'undefined' then null else ~~$(link).offset().top - 100])
-      linkOffsets.reverse() # Going bottom up so we catch the active link furthest down the page
+    if window.location.hash != ''
+      $('html, body').scrollTop($(window).scrollTop() - 100)
+    navLinks = $('#nav-links li a')
+    for item in navLinks
+      link = $(item).attr('href')
+      # ~~ forces integer context so we don't accidentally subtract in string context
+      linkOffsets.push([link, if typeof $(link).offset() is 'undefined' then null else ~~$(link).offset().top - 100])
+    linkOffsets.reverse() # Going bottom up so we catch the active link furthest down the page
 
-      checkOffset $(window).scrollTop()
+    checkOffset $(window).scrollTop()
 
-      timeout = null
-      $(window).scroll ->
-        scrollTop = $(this).scrollTop();
-        if !timeout && !animating
-          timeout = setTimeout ->
-            timeout = null
-            checkOffset scrollTop
-          , 100
+    timeout = null
+    $(window).scroll ->
+      scrollTop = $(this).scrollTop();
+      if !timeout && !animating
+        timeout = setTimeout ->
+          timeout = null
+          checkOffset scrollTop
+        , 100
 
   checkOffset = (scrollTop) ->
-      for link in linkOffsets
-        return if link[1] is null
-        if scrollTop + 10 > link[1]
-          activeLink = $('a[href="' + link[0] + '"]')
-          unless activeLink.hasClass 'active'
-            $('a.active').removeClass 'active'
-            activeLink.addClass 'active'
-          break
+    for link in linkOffsets
+      return if link[1] is null
+      if scrollTop + 10 > link[1]
+        activeLink = $('a[href="' + link[0] + '"]')
+        unless activeLink.hasClass 'active'
+          $('a.active').removeClass 'active'
+          activeLink.addClass 'active'
+        break

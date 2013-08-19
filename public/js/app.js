@@ -37,6 +37,9 @@
   if (document.body.clientWidth > 600) {
     $(window).load(function() {
       var item, link, navLinks, timeout, _i, _len;
+      if (window.location.hash !== '') {
+        $('html, body').scrollTop($(window).scrollTop() - 100);
+      }
       navLinks = $('#nav-links li a');
       for (_i = 0, _len = navLinks.length; _i < _len; _i++) {
         item = navLinks[_i];
