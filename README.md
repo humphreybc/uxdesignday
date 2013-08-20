@@ -6,6 +6,18 @@ Source code for uxdesignday.org - static HTML, CSS, and a little bit of JS. Foun
 
 ### TODO
 
+### For UXDD Wellington
+
+* Update intro text, location, price, etc.
+* Update metadata for Facebook / Twitter sharing
+* Update the link to purchase tickets
+* Update list of speakers and their images (at 2x for retina)
+* Update list of sponsors and their logos (at 2x for retina)
+
+#### General
+
+* Add new resources
+* Make the splash / home page responsive for mobile
 * Install Node on the server to do server-side compiling
 * Set up hooks instaed of using a cronjob to deploy
 * Set up Github Issues for tracking global problems / feature requests
@@ -55,9 +67,12 @@ A Gruntfile with a 'dev' task is available for development.
 
 ### Deploying
 
-Anything you push to the master branch will be live on uxdesignday.org and uxdesignday.com within 10 minutes of you pushing it. Only merge the your working branch into master when you're confident everything is looking peachy! You will also need to compile into the /public directory locally before pushing, so make sure you run 'grunt build' one final time. And make sure you've merged master into your working branch first to get any of the latest changes.
+Anything you push to the master branch will be live on uxdesignday.org and uxdesignday.com within 10 minutes of pushing it. Only merge your working branch into master (after merging master into your local branch first, of course) when you're confident everything is looking peachy! 
 
-The server will pull down your branch and point to the /public folder. See the Structure section above for more info.
+You will need to compile locally using 'grunt build' before pushing, since the server simply points to the /public directory and does not compile the code on its own.
+
+Then simply push up master, and the server will pull down the latest changes within 10 minutes.
+
 
 ### Questions?
 
