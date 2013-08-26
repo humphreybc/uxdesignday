@@ -12,7 +12,8 @@
 .icon-flickr:before{content:"\e008"}
 .icon-book:before{content:"\e009"}
 body{background:#f7f6f5;font-family:'Open Sans',sans-serif;color:#222;padding:100px 0 0;margin:0;font-size:20px;-webkit-font-smoothing:antialiased}
-.logo{background-image:url("../img/logo.png");background-size:cover;width:220px;height:200px;margin-left:170px}
+.logo{background-image:url("../img/logo.png");background-size:cover;width:220px;height:200px;margin-left:170px;}
+.logo.wellington{background-image:url("../img/logo_wel.png");width:262px;height:215px;margin-left:123px}
 .icon-twitter{color:#0099ec;transition:#0099ec 250ms;}
 .icon-twitter:hover{color:#20b1ff}
 .icon-facebook{color:#2d4785;transition:#2d4785 250ms;}
