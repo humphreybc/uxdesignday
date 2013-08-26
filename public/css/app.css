@@ -121,3 +121,6 @@ section{min-width:0}
 .home a .location{text-transform:uppercase;font-weight:900;font-size:96px;margin:0 20px;letter-spacing:-.05em}
 .home a .date{color:#666}
 .home a:hover{color:#ffa500}
+.sponsor-section .medallion{display:block;position:relative;float:left;margin:30px 121px;width:91px;height:92px;background-image:url("/img/medals_sprite@2x.png");background-position:left top;background-size:cover;}
+.sponsor-section .medallion.silver{background-position:182px top}
+.sponsor-section .medallion.bronze{background-position:91px top}
