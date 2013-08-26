@@ -36,8 +36,8 @@ section
     background-color lighten(blue, 3)
     transition background-color 250ms
     cursor default
-    padding 20px
-    min-height 200px
+    padding 10px 20px
+    min-height 260px
 
     &:hover
       background-color lighten(blue, 5)
@@ -47,16 +47,18 @@ section
     margin-bottom 40px
 
     h3
-      margin-bottom -5px
+      margin-bottom 0px
 
-    a
+    a, .speaker-title
       font-size 0.75em
+      line-height 1.3em
+      display block
       margin 0px
       color gray
       transition color 250ms
 
-      &:hover
-        color blue
+    a:hover
+      color blue
 
 .sponsor-section
   min-height 400px

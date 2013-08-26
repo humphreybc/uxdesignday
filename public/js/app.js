@@ -27,16 +27,19 @@
       return false;
     });
     return $('#resource-roulette').click(function(e) {
-      var resourceLinks, resourceTab;
+      var resourceLinks;
       e.preventDefault();
       resourceLinks = $('.resources a').get();
-      return resourceTab = window.open(resourceLinks[Math.floor(Math.random() * resourceLinks.length)].getAttribute('href'), '_blank');
+      return window.open(resourceLinks[Math.floor(Math.random() * resourceLinks.length)].getAttribute('href'), '_blank');
     });
   });
 
   if (document.body.clientWidth > 600) {
     $(window).load(function() {
       var item, link, navLinks, timeout, _i, _len;
+      if (window.location.hash !== '') {
+        $('html, body').scrollTop($(window).scrollTop() - 100);
+      }
       navLinks = $('#nav-links li a');
       for (_i = 0, _len = navLinks.length; _i < _len; _i++) {
         item = navLinks[_i];
@@ -58,8 +61,7 @@
       });
     });
     checkOffset = function(scrollTop) {
-      var activeLink, breakLoop, link, _i, _len;
-      breakLoop = false;
+      var activeLink, link, _i, _len;
       for (_i = 0, _len = linkOffsets.length; _i < _len; _i++) {
         link = linkOffsets[_i];
         if (link[1] === null) {
@@ -71,9 +73,6 @@
             $('a.active').removeClass('active');
             activeLink.addClass('active');
           }
-          breakLoop = true;
-        }
-        if (breakLoop) {
           break;
         }
       }

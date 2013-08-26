@@ -34,6 +34,10 @@ module.exports = function(grunt) {
       styles: {
         files: 'css/**/*.styl',
         tasks: ['stylus']
+      },
+      livereload: {
+        options: { livereload: true },
+        files: ['public/**/*']
       }
     },
     uglify: {
