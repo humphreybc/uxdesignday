@@ -16,7 +16,7 @@
   body
     font-size 18px
 
-  .container, .box, .box-reason, .button, .box-speaker img, .resources li
+  .container, .box, .box-reason, .button, .box-speaker img, .resources li,
     width 100%
     box-sizing border-box
     -moz-box-sizing border-box
@@ -40,3 +40,25 @@
 
   .logo, #nav-links, #header-share
     display none
+
+  body.home
+    a
+      background-color blue
+      width 100%
+      padding 1em 0.5em
+      margin 0 0
+      display block
+
+      &:hover
+        background-color orange
+
+
+    a .location
+      font-size 18px
+      color white
+      margin 0
+    a .date
+      color white
+      float right
+      margin 0
+
