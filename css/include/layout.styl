@@ -64,12 +64,30 @@ section
   min-height 400px
 
   img
-    padding 0 40px 0
-    -webkit-transition padding 250ms
-    -moz-transition padding 250ms
-    -ie-transition padding 250ms
-    transition padding 250ms
+    margin 0 40px 0
     border none
+    opacity 0.9
 
     &:hover
-      padding 0px 40px 40px
+      opacity 1
+
+  .medallion
+    display block
+    position relative
+    float left
+    margin 30px 121px
+    width 91px
+    height 92px
+    background-image url("../img/medals_sprite@2x.png")
+    background-position left top
+    background-size cover
+
+    &.silver
+      background-position 182px top
+    &.bronze
+      background-position 91px top
+
+.sponsor-box
+  display inline-block
+  width 330px
+  vertical-align top

@@ -37,9 +37,8 @@ h2{font-size:1.3em;font-weight:600;margin:0 0}
 h3{font-size:.9em;margin:5px 0 0;font-weight:600}
 p{font-size:1em;font-weight:400;line-height:30px}
 a{text-decoration:none;color:#2ba6d4}
-.blue-section a{color:#fff;font-weight:bolder;}
-.blue-section a:hover{color:#40afd8}
-.blue-section a.active{color:#207c9f}
+#event-details a{color:#fff;font-weight:bolder;}
+#event-details a:hover{text-decoration:underline}
 ul{margin:0;padding:0;list-style-type:none}
 b,strong,bold{font-weight:700}
 td{margin-right:20px}
@@ -50,6 +49,8 @@ header nav ul li{float:left;display:inline-block;list-style-type:none;margin-rig
 header nav ul li:last-child{margin-right:0}
 header nav ul li a{color:#222;font-weight:600;font-size:.8em;}
 header nav ul li a:hover{color:#2ba6d4}
+header nav ul li a.active{color:#207c9f;}
+header nav ul li a.active:hover{color:#2ba6d4}
 header nav ul .icon{margin-right:10px}
 header .nav-logo{background-image:url("../img/navlogo.png");width:60px;height:60px;background-size:cover;margin:20px 40px 0 0;float:left;transition:margin 150ms;}
 header .nav-logo:hover{margin:15px 40px 5px 0;opacity:.9}
@@ -61,7 +62,7 @@ header #header-share:hover{color:#222}
 #share-box li:last-child{margin-right:0}
 #share-box li a{font-size:1.5em;transition:color 250ms}
 .button{color:#fff;background-color:#207c9f;padding:30px 40px;font-size:1em;font-weight:700;text-transform:uppercase;margin:20px 0;box-shadow:10px 10px 0 #15536a;transition:background-color 100ms,margin 100ms,box-shadow 100ms;position:relative;float:left;}
-.button:hover{background-color:#2283a7;color:#fff}
+.button:hover{background-color:#2283a7;color:#fff !important}
 .button:active{box-shadow:none;margin:30px -10px 10px 10px}
 .button .button-inner{background-color:#1e7597;position:absolute;left:0;top:0;height:100%;padding:0 20px;line-height:89px}
 section{padding:40px 0;clear:both;min-width:1040px}
@@ -78,8 +79,12 @@ section{padding:40px 0;clear:both;min-width:1040px}
 .box-speaker a,.box-speaker .speaker-title{font-size:.75em;line-height:1.3em;display:block;margin:0;color:#808080;transition:color 250ms}
 .box-speaker a:hover{color:#2ba6d4}
 .sponsor-section{min-height:400px;}
-.sponsor-section img{padding:0 40px 0;-webkit-transition:padding 250ms;-moz-transition:padding 250ms;-ie-transition:padding 250ms;transition:padding 250ms;border:none;}
-.sponsor-section img:hover{padding:0 40px 40px}
+.sponsor-section img{margin:0 40px 0;border:none;opacity:.9;}
+.sponsor-section img:hover{opacity:1}
+.sponsor-section .medallion{display:block;position:relative;float:left;margin:30px 121px;width:91px;height:92px;background-image:url("../img/medals_sprite@2x.png");background-position:left top;background-size:cover;}
+.sponsor-section .medallion.silver{background-position:182px top}
+.sponsor-section .medallion.bronze{background-position:91px top}
+.sponsor-box{display:inline-block;width:330px;vertical-align:top}
 .social{text-align:center;}
 .social li{display:inline;margin:0 5px;}
 .social li a{font-size:48px;transition:color 250ms}
@@ -129,7 +134,3 @@ body.home a .date{color:#fff;float:right;margin:0}
 .home a .location{text-transform:uppercase;font-weight:900;font-size:96px;margin:0 20px;letter-spacing:-.05em}
 .home a .date{color:#666}
 .home a:hover{color:#ffa500}
-.sponsor-section .medallion{display:block;position:relative;float:left;margin:30px 121px;width:91px;height:92px;background-image:url("/img/medals_sprite@2x.png");background-position:left top;background-size:cover;}
-.sponsor-section .medallion.silver{background-position:182px top}
-.sponsor-section .medallion.bronze{background-position:91px top}
-.sponsor-box{display:inline-block;width:330px;vertical-align:top}
