@@ -12,7 +12,8 @@
 .icon-flickr:before{content:"\e008"}
 .icon-book:before{content:"\e009"}
 body{background:#f7f6f5;font-family:'Open Sans',sans-serif;color:#222;padding:100px 0 0;margin:0;font-size:20px;-webkit-font-smoothing:antialiased}
-.logo{background-image:url("../img/logo.png");background-size:cover;width:220px;height:200px;margin-left:170px}
+.logo{background-image:url("../img/logo.png");background-size:cover;width:220px;height:200px;margin-left:170px;}
+.logo.wellington{background-image:url("../img/logo_wel.png");width:262px;height:215px;margin-left:123px}
 .icon-twitter{color:#0099ec;transition:#0099ec 250ms;}
 .icon-twitter:hover{color:#20b1ff}
 .icon-facebook{color:#2d4785;transition:#2d4785 250ms;}
@@ -31,13 +32,14 @@ body{background:#f7f6f5;font-family:'Open Sans',sans-serif;color:#222;padding:10
 .black-section{background-color:#222;color:#fff}
 .gray-section{background-color:#f7f6f5}
 .overflow{overflow:hidden}
-h1{font-size:1.8em;line-height:1.4em;font-weight:600;margin:0 0 40px;letter-spacing:-1px}
+h1{font-size:1.7em;line-height:1.4em;font-weight:600;margin:0 0 40px;letter-spacing:-1px}
 h2{font-size:1.3em;font-weight:600;margin:0 0}
 h3{font-size:.9em;margin:5px 0 0;font-weight:600}
 p{font-size:1em;font-weight:400;line-height:30px}
-a{text-decoration:none;color:#2ba6d4;}
-a:hover{color:#40afd8}
-a.active{color:#207c9f}
+a{text-decoration:none;color:#2ba6d4}
+.blue-section a{color:#fff;font-weight:bolder;}
+.blue-section a:hover{color:#40afd8}
+.blue-section a.active{color:#207c9f}
 ul{margin:0;padding:0;list-style-type:none}
 b,strong,bold{font-weight:700}
 td{margin-right:20px}
@@ -76,7 +78,7 @@ section{padding:40px 0;clear:both;min-width:1040px}
 .box-speaker a,.box-speaker .speaker-title{font-size:.75em;line-height:1.3em;display:block;margin:0;color:#808080;transition:color 250ms}
 .box-speaker a:hover{color:#2ba6d4}
 .sponsor-section{min-height:400px;}
-.sponsor-section img{padding:20px 40px 20px;transition:padding 250ms;border:none;}
+.sponsor-section img{padding:0 40px 0;-webkit-transition:padding 250ms;-moz-transition:padding 250ms;-ie-transition:padding 250ms;transition:padding 250ms;border:none;}
 .sponsor-section img:hover{padding:0 40px 40px}
 .social{text-align:center;}
 .social li{display:inline;margin:0 5px;}
@@ -104,6 +106,7 @@ footer ul li a:hover{color:#207c9f}
 .tooltip.left .tooltip-arrow{top:50%;right:0;margin-top:-5px;border-width:5px 0 5px 5px;border-left-color:rgba(0,0,0,0.9)}
 .tooltip.bottom .tooltip-arrow{top:0;left:50%;margin-left:-5px;border-width:0 5px 5px;border-bottom-color:rgba(0,0,0,0.9)}
 @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi){header .nav-logo{background-image:url("../img/navlogo@2x.png")}
+.logo.wellington{background-image:url("../img/logo_wel@2x.png@2x.png")}
 }@media screen and (max-width: 980px){header{position:absolute}
 }@media screen and (max-width: 600px){body{font-size:18px}
 .container,.box,.box-reason,.button,.box-speaker img,.resources li{width:100%;box-sizing:border-box;-moz-box-sizing:border-box}
@@ -113,6 +116,11 @@ section{min-width:0}
 .box-speaker img{height:auto}
 .sponsor-section .container img{margin:30px auto;display:block;padding:0}
 .logo,#nav-links,#header-share{display:none}
+body.home{margin-top:60px;padding:0;}
+body.home a{background-color:#2ba6d4;padding:1em .5em;margin:0 0;display:block;}
+body.home a:hover{background-color:#ffa500}
+body.home a .location{font-size:18px;color:#fff;margin:0}
+body.home a .date{color:#fff;float:right;margin:0}
 }.schedule{padding-top:0;font-size:.95em;}
 .schedule h1{margin-bottom:0}
 .schedule h2{margin:20px 0 10px}
