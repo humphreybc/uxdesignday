@@ -84,7 +84,7 @@ section{padding:40px 0;clear:both;min-width:1040px}
 .sponsor-section .medallion{display:block;position:relative;float:left;margin:30px 121px;width:91px;height:92px;background-image:url("../img/medals_sprite@2x.png");background-position:left top;background-size:cover;}
 .sponsor-section .medallion.silver{background-position:182px top}
 .sponsor-section .medallion.bronze{background-position:91px top}
-.sponsor-box{display:inline-block;width:330px;vertical-align:top}
+.sponsor-box{display:inline-block;width:32%;vertical-align:top}
 .social{text-align:center;}
 .social li{display:inline;margin:0 5px;}
 .social li a{font-size:48px;transition:color 250ms}
