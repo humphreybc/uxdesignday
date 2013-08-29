@@ -120,7 +120,7 @@ header .container{width:100%}
 section{min-width:0}
 .box-speaker img{height:auto}
 .sponsor-section .medallion{left:-45px;margin-left:50%}
-.sponsor-box{width:100%}
+.s-box{width:100%}
 .sponsor-section .container img{margin:30px auto;display:block;padding:0}
 .logo,#nav-links,#header-share{display:none}
 body.home{margin-top:60px;padding:0;}
