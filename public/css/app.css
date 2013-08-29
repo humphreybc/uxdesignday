@@ -106,7 +106,7 @@ footer ul li a:hover{color:#207c9f}
 .tooltip.left .tooltip-arrow{top:50%;right:0;margin-top:-5px;border-width:5px 0 5px 5px;border-left-color:rgba(0,0,0,0.9)}
 .tooltip.bottom .tooltip-arrow{top:0;left:50%;margin-left:-5px;border-width:0 5px 5px;border-bottom-color:rgba(0,0,0,0.9)}
 @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi){header .nav-logo{background-image:url("../img/navlogo@2x.png")}
-.logo.wellington{background-image:url("../img/logo_wel@2x.png@2x.png")}
+.logo.wellington{background-image:url("../img/logo_wel@2x.png")}
 }@media screen and (max-width: 980px){header{position:absolute}
 }@media screen and (max-width: 600px){body{font-size:18px}
 .container,.box,.box-reason,.button,.box-speaker img,.resources li{width:100%;box-sizing:border-box;-moz-box-sizing:border-box}
