@@ -72,14 +72,13 @@ section{padding:40px 0;clear:both;min-width:1040px}
 #reasons{margin-top:40px;margin-bottom:0;overflow:hidden}
 .box{float:left;width:280px;margin:0 20px 20px 0;}
 .box-last{margin:0 0 20px 0}
-.box-reason{background-color:#38abd7;transition:background-color 250ms;cursor:default;padding:10px 20px;min-height:260px;}
-.box-reason:hover{background-color:#40afd8}
+.box-reason{background-color:#38abd7;transition:background-color 250ms;cursor:default;padding:10px 20px;min-height:260px}
 .box-speaker{width:235px;margin-bottom:40px;}
 .box-speaker h3{margin-bottom:0}
 .box-speaker a,.box-speaker .speaker-title{font-size:.75em;line-height:1.3em;display:block;margin:0;color:#808080;transition:color 250ms}
 .box-speaker a:hover{color:#2ba6d4}
 .sponsor-section{min-height:400px;}
-.sponsor-section img{margin:0 40px 0;border:none;opacity:.9;}
+.sponsor-section img{margin:15px 40px 15px;border:none;opacity:.9;}
 .sponsor-section img:hover{opacity:1}
 .sponsor-section .medallion{display:block;position:relative;float:left;margin:30px 121px;width:91px;height:92px;background-image:url("../img/medals_sprite@2x.png");background-position:left top;background-size:cover;}
 .sponsor-section .medallion.silver{background-position:182px top}
