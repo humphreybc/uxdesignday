@@ -67,8 +67,13 @@ header #header-share:hover{color:#222}
 .button .button-inner{background-color:#1e7597;position:absolute;left:0;top:0;height:100%;padding:0 20px;line-height:89px}
 section{padding:40px 0;clear:both;min-width:1040px}
 .container{width:1000px;margin:0 auto;padding:0 20px;position:relative}
-#event-details{float:left;margin:33px 0 0 40px;}
-#event-details p{font-size:.6em;line-height:.6em}
+#event-details{float:left;margin:23px 0 0 40px;width:420px;}
+#event-details p{font-size:.6em;line-height:1.3em;margin:.6em 0}
+.download-guides{width:260px;margin:23px 0 0 20px;}
+.download-guides li{display:block;width:71px;margin-left:15px;float:left;text-align:center;font-size:.5em;line-height:1.2em;background-size:contain;background-repeat:no-repeat;}
+.download-guides li a{display:block;padding:95px 0 0 0;color:#fff;text-transform:uppercase;font-weight:800}
+.download-guides li.convince-your-boss{background-image:url("../img/convince_boss_icon@2x.jpg")}
+.download-guides li.schedule{background-image:url("../img/schedule_icon@2x.jpg")}
 #reasons{margin-top:40px;margin-bottom:0;overflow:hidden}
 .box{float:left;width:280px;margin:0 20px 20px 0;}
 .box-last{margin:0 0 20px 0}
@@ -114,7 +119,7 @@ footer ul li a:hover{color:#207c9f}
 }@media screen and (max-width: 980px){header{position:absolute}
 }@media screen and (max-width: 600px){body{font-size:18px}
 .container,.box,.box-reason,.button,.box-speaker img,.resources li{width:100%;box-sizing:border-box;-moz-box-sizing:border-box}
-#event-details{margin:0}
+#event-details{margin:0;width:100%}
 header .container{width:100%}
 section{min-width:0}
 .box-speaker img{height:auto}
@@ -127,6 +132,7 @@ body.home a{background-color:#2ba6d4;padding:1em .5em;margin:0 0;display:block;}
 body.home a:hover{background-color:#ffa500}
 body.home a .location{font-size:18px;color:#fff;margin:0}
 body.home a .date{color:#fff;float:right;margin:0}
+.download-guides{width:100%}
 }.schedule{padding-top:0;font-size:.95em;}
 .schedule h1{margin-bottom:0}
 .schedule h2{margin:20px 0 10px}
