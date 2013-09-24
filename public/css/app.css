@@ -69,7 +69,7 @@ section{padding:40px 0;clear:both;min-width:1040px}
 .container{width:1000px;margin:0 auto;padding:0 20px;position:relative}
 #event-details{float:left;margin:23px 0 0 40px;width:420px;}
 #event-details p{font-size:.6em;line-height:1.3em;margin:.6em 0}
-.download-guides{width:260px;margin:20px 0 0 20px;}
+.download-guides{width:259px;margin:20px 0 0 20px;}
 .download-guides li{display:block;width:71px;margin-left:15px;float:left;text-align:center;font-size:.5em;line-height:1.2em;background-size:contain;background-repeat:no-repeat;}
 .download-guides li a{display:block;padding:95px 0 0 0;color:#fff;text-transform:uppercase;font-weight:800}
 .download-guides li.convince-your-boss{background-image:url("../img/convince_boss_icon@2x.jpg")}
