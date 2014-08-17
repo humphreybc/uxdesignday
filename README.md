@@ -2,7 +2,7 @@ UX Design Day
 =============
 [uxdesignday.org](http://uxdesignday.org)
 
-Source code for uxdesignday.org - static HTML, CSS, and a little bit of JS. Founded, designed, and predominantly built by Benjamin Humphrey with some help from Sam Tran, and Dave Strydom for the resources list.
+Source code for uxdesignday.org - static HTML, Stylus, and a little bit of Coffeescript.
 
 ### TODO
 
@@ -14,21 +14,19 @@ Source code for uxdesignday.org - static HTML, CSS, and a little bit of JS. Foun
 
 ### Structure
 
-So for now, the structure is a little bit crap but until I have some more time, this is what we have. Basically the server has some subdomains set up for each conference, eg. dunedin.uxdesignday.org and wellington.uxdesignday.org.
+CSS and JS are compiled and minified into the public directory, whereas the HTML and content reside in the /public directory permanently. There is no templating engine for the HTML or assets. 
 
-These subdomains are hooked up to a cronjob which pulls down the corresponding branch every few minutes and looks into the /public directory. So wellington.uxdesignday.org will reflect whatever is in the /public folder of the branch 'wellington'.
-
-This hasn't happened yet, but eventually master will simply be global styles and layout, and a splash page pointing people towards the individual conference pages. The idea is that you will occaisonally merge master back into your individual conference-specific branches.
+Everything needs to be compiled and checked locally at this stage as the server does no compilation. The server has folders for each location. Every few minutes the server does a pull and each locaiton is pointed to the /public directory. So uxdesignday.org/wellington will reflect whatever is in the /public folder of the branch 'wellington'.
 
 Global changes should be tested in the 'beta' branch first (beta.uxdesignday.org) before being deployed to master (uxdesignday.org).
 
-FYI - uxdesignday.com just redirects to .org.
+Lastly, the domain name uxdesignday.com just redirects to uxdesignday.org.
 
 ### Dependencies
 
 Uses [Coffeescript](http://coffeescript.org/) and [Stylus](http://learnboost.github.com/stylus/), and it's compiled using Node.js, so you'll need to install that on your computer. Also install npm (node package manager). More on that below.
 
-IMPORTANT: The server doesn't yet compile anything, so you will need to compile locally into the /public directory and push that up to Git. Don't ignore that folder. Also, don't delete it - there are some assets in there that don't get automatically generated when you compile.
+IMPORTANT: The server doesn't compile anything, so you will need to compile locally into the /public directory and push that up to Git. Don't ignore that folder. Also don't delete it.
 
 ### Running locally with Grunt (recommended)
 
@@ -56,11 +54,17 @@ A Gruntfile with a 'dev' task is available for development.
 
 ### Making changes
 
-CSS changes are made by changing the .styl files under /css/include. These will get joined together, compiled to CSS, and then minified into /public/app.css when 'grunt build' or 'grunt dev' is run.
-
-JavaScript changes are made under /js/app.coffee and the Coffeescript will be compiled to JavaScript in /public/js/app.js. Grunt will also create a minified copy: /public/js/app.min.js.
+#### Content (HTML)
 
 HTML and file changes are made directly in /public/dunedin/index.html. Each location has its own folder with sub-folders for speaker and sponsor images.
+
+#### Styling (CSS)
+
+CSS changes are made by changing the .styl files under /css/include. These will get joined together, compiled to CSS, and then minified into /public/app.css when 'grunt build' or 'grunt dev' is run.
+
+#### Functionality (JS)
+
+JavaScript changes are made under /js/app.coffee and the Coffeescript will be compiled to JavaScript in /public/js/app.js. Grunt will also create a minified copy: /public/js/app.min.js.
 
 ### Deploying
 
