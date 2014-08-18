@@ -21,7 +21,7 @@ $(document).ready ->
     false
 
   $('#resource-roulette').click (e) ->
-    e.preventDefault()
+    e.defaultPrevented()
     resourceLinks = $('.resources a').get()
     window.open resourceLinks[Math.floor(Math.random() * resourceLinks.length)].getAttribute('href'), '_blank'
 
