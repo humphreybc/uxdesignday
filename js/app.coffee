@@ -15,7 +15,7 @@ $(document).ready ->
   $('nav a').click ->
     animating = true
     $('html, body').animate
-      scrollTop: ($($(this).attr('href')).offset().top) - 100
+      scrollTop: ($($(this).attr('href')).offset().top)
     , 500, ->
       checkOffset $(window).scrollTop()
       animating = false
@@ -28,8 +28,6 @@ $(document).ready ->
 
 if document.body.clientWidth > 600
   $(window).load ->
-    if window.location.hash != ''
-      $('html, body').scrollTop($(window).scrollTop() - 100)
     navLinks = $('#nav-links li a')
     for item in navLinks
       link = $(item).attr('href')
