@@ -6,10 +6,12 @@
   linkOffsets = [];
 
   $(document).ready(function() {
-    var forceHeight, s;
+    var s;
     console.log('Like looking under the hood? Feel free to help make this site better at https://github.com/humphreybc/uxdesignday');
     if (document.body.clientWidth > 600) {
-      s = skrollr.init([forceHeight = false]);
+      s = skrollr.init({
+        forceHeight: false
+      });
       $('[rel=tooltip]').tooltip({
         placement: 'bottom',
         delay: {
