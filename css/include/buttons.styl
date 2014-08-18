@@ -2,30 +2,18 @@
 
 .button
   color white
-  background-color darkBlue
+  background-color blue
   padding 30px 40px
   font-size 1em
   font-weight 700
-  text-transform uppercase
   margin 20px 0px
-  box-shadow 10px 10px 0px darkerBlue
-  transition background-color 100ms, margin 100ms, box-shadow 100ms
-  position relative
-  float left
+  transition background-color 100ms
+  border-radius 3px
+  display inline-block
 
   &:hover
-    background-color lighten(darkBlue, 2)
-    color white !important
+    background-color lighten(blue, 5)
 
   &:active
-    box-shadow none
-    margin 30px -10px 10px 10px
-
-  .button-inner
-    background-color darken(darkBlue, 2)
-    position absolute
-    left 0px
-    top 0px
-    height 100%
-    padding 0px 20px
-    line-height 89px
+    background-color darken(blue, 5)
+    box-shadow inset 0px 5px 10px rgba(0,0,0,0.15)
