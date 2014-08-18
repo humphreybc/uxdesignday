@@ -32,7 +32,7 @@
     });
     return $('#resource-roulette').click(function(e) {
       var resourceLinks;
-      e.defaultPrevented();
+      e.preventDefault();
       resourceLinks = $('.resources a').get();
       return window.open(resourceLinks[Math.floor(Math.random() * resourceLinks.length)].getAttribute('href'), '_blank');
     });
