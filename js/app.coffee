@@ -3,6 +3,7 @@ linkOffsets = []
 
 $(document).ready ->
   console.log 'Like looking under the hood? Feel free to help make this site better at https://github.com/humphreybc/uxdesignday'
+  s = skrollr.init()
 
   if document.body.clientWidth > 600
     $('[rel=tooltip]').tooltip
