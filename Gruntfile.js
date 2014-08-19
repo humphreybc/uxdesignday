@@ -37,8 +37,13 @@ module.exports = function(grunt) {
       },
       livereload: {
         options: { livereload: true },
-        files: ['public/**/*']
-      }
+        files: ['public/**/*'],
+        tasks: []
+      },
+      options: {
+        tasks: ['build'],
+        atBegin: true
+      },
     },
     uglify: {
       app: {
