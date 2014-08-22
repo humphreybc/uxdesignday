@@ -10,7 +10,6 @@ Source code for uxdesignday.org - static HTML, Stylus, and a little bit of Coffe
 
 * Install Node on the server to do server-side compiling
 * Set up hooks instead of using a cronjob to deploy
-* Refactor all the things
 
 ### Structure
 
@@ -21,6 +20,8 @@ Everything needs to be compiled and checked locally at this stage as the server 
 Global changes should be tested in the 'beta' branch first (beta.uxdesignday.org) before being deployed to master (uxdesignday.org).
 
 Lastly, the domain name uxdesignday.com just redirects to uxdesignday.org.
+
+Note: The UTF-8 charset is set in the HTTP header on the server, so if you see funny characters instead of smart quotes, everything should be okay when pushed up.
 
 ### Dependencies
 
