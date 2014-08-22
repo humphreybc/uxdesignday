@@ -6,7 +6,7 @@
   linkOffsets = [];
 
   $(document).ready(function() {
-    var s;
+    var randbanner, s;
     console.log('Like looking under the hood? Feel free to help make this site better at https://github.com/humphreybc/uxdesignday');
     if (document.body.clientWidth > 600) {
       s = skrollr.init({
@@ -30,12 +30,14 @@
       });
       return false;
     });
-    return $('#resource-roulette').click(function(e) {
+    $('#resource-roulette').click(function(e) {
       var resourceLinks;
       e.preventDefault();
       resourceLinks = $('.resources a').get();
       return window.open(resourceLinks[Math.floor(Math.random() * resourceLinks.length)].getAttribute('href'), '_blank');
     });
+    randbanner = Math.floor(Math.random() * 4) + 1;
+    return $('#banner').css('background-image', 'url("../img/banner' + randbanner + '.jpg")');
   });
 
   if (document.body.clientWidth > 600) {

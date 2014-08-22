@@ -26,6 +26,10 @@ $(document).ready ->
     resourceLinks = $('.resources a').get()
     window.open resourceLinks[Math.floor(Math.random() * resourceLinks.length)].getAttribute('href'), '_blank'
 
+  randbanner = Math.floor(Math.random() * 4) + 1
+
+  $('#banner').css('background-image', 'url("../img/banner' + randbanner + '.jpg")')
+
 if document.body.clientWidth > 600
   $(window).load ->
     navLinks = $('#nav-links li a')
