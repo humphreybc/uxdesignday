@@ -28,7 +28,11 @@ $(document).ready ->
 
   randbanner = Math.floor(Math.random() * 4) + 1
 
-  $('#banner').css('background-image', 'url("../img/banner' + randbanner + '.jpg")')
+  $("#banner").animate(
+    opacity: 0
+  , 0).css('background-image': 'url("../img/banner' + randbanner + '.jpg")').animate
+    opacity: 1
+  , 1000
 
 if document.body.clientWidth > 600
   $(window).load ->

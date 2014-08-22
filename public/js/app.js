@@ -37,7 +37,13 @@
       return window.open(resourceLinks[Math.floor(Math.random() * resourceLinks.length)].getAttribute('href'), '_blank');
     });
     randbanner = Math.floor(Math.random() * 4) + 1;
-    return $('#banner').css('background-image', 'url("../img/banner' + randbanner + '.jpg")');
+    return $("#banner").animate({
+      opacity: 0
+    }, 0).css({
+      'background-image': 'url("../img/banner' + randbanner + '.jpg")'
+    }).animate({
+      opacity: 1
+    }, 1000);
   });
 
   if (document.body.clientWidth > 600) {
