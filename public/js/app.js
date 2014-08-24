@@ -6,8 +6,12 @@
   linkOffsets = [];
 
   $(document).ready(function() {
+    var randbanner, s;
     console.log('Like looking under the hood? Feel free to help make this site better at https://github.com/humphreybc/uxdesignday');
     if (document.body.clientWidth > 600) {
+      s = skrollr.init({
+        forceHeight: false
+      });
       $('[rel=tooltip]').tooltip({
         placement: 'bottom',
         delay: {
@@ -19,27 +23,32 @@
     $('nav a').click(function() {
       animating = true;
       $('html, body').animate({
-        scrollTop: ($($(this).attr('href')).offset().top) - 100
+        scrollTop: ($($(this).attr('href')).offset().top)
       }, 500, function() {
         checkOffset($(window).scrollTop());
         return animating = false;
       });
       return false;
     });
-    return $('#resource-roulette').click(function(e) {
+    $('#resource-roulette').click(function(e) {
       var resourceLinks;
       e.preventDefault();
       resourceLinks = $('.resources a').get();
       return window.open(resourceLinks[Math.floor(Math.random() * resourceLinks.length)].getAttribute('href'), '_blank');
     });
+    randbanner = Math.floor(Math.random() * 4) + 1;
+    return $("#banner").animate({
+      opacity: 0
+    }, 0).css({
+      'background-image': 'url("../img/banner' + randbanner + '.jpg")'
+    }).animate({
+      opacity: 1
+    }, 1000);
   });
 
   if (document.body.clientWidth > 600) {
     $(window).load(function() {
       var item, link, navLinks, timeout, _i, _len;
-      if (window.location.hash !== '') {
-        $('html, body').scrollTop($(window).scrollTop() - 100);
-      }
       navLinks = $('#nav-links li a');
       for (_i = 0, _len = navLinks.length; _i < _len; _i++) {
         item = navLinks[_i];

@@ -1,17 +1,9 @@
 // Replace the logo with high res asset
 
-@media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi)
-  header .nav-logo
-    background-image url('../img/navlogo@2x.png')
+@media screen and (max-width: 820px)
 
-  .logo.wellington
-    background-image url('../img/logo_wel@2x.png')
-
-
-@media screen and (max-width: 980px)
-
-  header
-    position absolute
+  #nav-links
+    display none
 
 // Responsiveness for mobile
 
@@ -20,17 +12,20 @@
   body
     font-size 18px
 
-  .container, .box, .box-reason, .button, .box-speaker img, .resources li
+  .container, .box, .button, .box-speaker img, .resources li
     width 100%
     box-sizing border-box
     -moz-box-sizing border-box
 
-  #event-details
-    margin 0px
-    width 100%
+  header
+    position absolute
+    box-shadow none
 
-  header .container
-    width 100%
+    .container
+      width 100%
+
+  #banner h1
+    font-size 2.5em
 
   section
     min-width 0
@@ -38,42 +33,9 @@
   .box-speaker img
     height auto
 
-  .sponsor-section .medallion
-    left -45px
-    margin-left 50%
-
-  .s-box
-    width 100%
-
   .sponsor-section .container img
     margin 30px auto
     display block
     padding 0px
 
-  .logo, #nav-links, #header-share
-    display none
 
-  body.home
-    margin-top 60px
-    padding 0
-    a
-      background-color blue
-      padding 1em 0.5em
-      margin 0 0
-      display block
-
-      &:hover
-        background-color orange
-
-
-    a .location
-      font-size 18px
-      color white
-      margin 0
-    a .date
-      color white
-      float right
-      margin 0
-
-  .download-guides
-    width 100%
