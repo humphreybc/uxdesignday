@@ -4,7 +4,7 @@ linkOffsets = []
 $(document).ready ->
   console.log 'Like looking under the hood? Feel free to help make this site better at https://github.com/humphreybc/uxdesignday'
 
-  if document.body.clientWidth > 600
+  if document.body.clientWidth > 768
     s = skrollr.init forceHeight: false
     $('[rel=tooltip]').tooltip
       placement: 'bottom'
