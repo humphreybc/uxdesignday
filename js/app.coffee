@@ -28,7 +28,7 @@ $(document).ready ->
 
   $('#max-bio-trigger').click (e) ->
     e.preventDefault()
-    $('#max-bio').fadeIn()
+    $('#max-bio').show()
 
   $('.bio-modal-close').click (e) ->
     bioFadeOut()
@@ -38,7 +38,7 @@ $(document).ready ->
       bioFadeOut()
 
   bioFadeOut = () ->
-    $('.bio-overlay').fadeOut()
+    $('.bio-overlay').hide()
 
 if document.body.clientWidth > 600
   $(window).load ->

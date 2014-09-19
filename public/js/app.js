@@ -34,7 +34,7 @@
     }, 1000);
     $('#max-bio-trigger').click(function(e) {
       e.preventDefault();
-      return $('#max-bio').fadeIn();
+      return $('#max-bio').show();
     });
     $('.bio-modal-close').click(function(e) {
       return bioFadeOut();
@@ -45,7 +45,7 @@
       }
     });
     return bioFadeOut = function() {
-      return $('.bio-overlay').fadeOut();
+      return $('.bio-overlay').hide();
     };
   });
 
