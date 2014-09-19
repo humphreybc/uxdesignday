@@ -48,7 +48,7 @@ module.exports = function(grunt) {
     uglify: {
       app: {
         files: {
-          'public/js/app.min.js': ['public/js/jquery-2.1.1.min.js', 'public/js/bootstrap-tooltip.js', 'public/js/skrollr.min.js', 'public/js/app.js']
+          'public/js/app.min.js': ['public/js/jquery-2.1.1.min.js', 'public/js/bootstrap-tooltip.js', 'public/js/app.js']
         }
       }
     }

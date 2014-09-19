@@ -49,7 +49,7 @@ section
     h3
       margin-bottom 0px
 
-    a, .speaker-title
+    .speaker-meta p
       font-size 0.75em
       line-height 1.3em
       display block
@@ -61,7 +61,12 @@ section
       color blue
 
     img
+      cursor pointer
       border-radius 6px
+      transition opacity 250ms
+
+      &:hover
+        opacity 0.8
 
 .bio-overlay
   position fixed
