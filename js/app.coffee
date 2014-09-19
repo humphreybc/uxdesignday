@@ -28,16 +28,22 @@ $(document).ready ->
 
   $('#max-bio-trigger').click (e) ->
     e.preventDefault()
-    $('#max-bio').show()
+    modalShow()
 
   $('.bio-modal-close').click (e) ->
-    bioFadeOut()
+    e.preventDefault()
+    modalHide()
 
   $(document).keyup (e) ->
     if e.keyCode is 27
-      bioFadeOut()
+      modalHide()
 
-  bioFadeOut = () ->
+  modalShow = () ->
+    $('.site').addClass 'modal-open'
+    $('.bio-overlay').show()
+
+  modalHide = () ->
+    $('.site').removeClass 'modal-open'
     $('.bio-overlay').hide()
 
 if document.body.clientWidth > 600

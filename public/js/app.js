@@ -6,7 +6,7 @@
   linkOffsets = [];
 
   $(document).ready(function() {
-    var bioFadeOut, randbanner;
+    var modalHide, modalShow, randbanner;
     console.log('Like looking under the hood? Feel free to help make this site better at https://github.com/humphreybc/uxdesignday');
     $('nav a').click(function() {
       animating = true;
@@ -34,17 +34,23 @@
     }, 1000);
     $('#max-bio-trigger').click(function(e) {
       e.preventDefault();
-      return $('#max-bio').show();
+      return modalShow();
     });
     $('.bio-modal-close').click(function(e) {
-      return bioFadeOut();
+      e.preventDefault();
+      return modalHide();
     });
     $(document).keyup(function(e) {
       if (e.keyCode === 27) {
-        return bioFadeOut();
+        return modalHide();
       }
     });
-    return bioFadeOut = function() {
+    modalShow = function() {
+      $('.site').addClass('modal-open');
+      return $('.bio-overlay').show();
+    };
+    return modalHide = function() {
+      $('.site').removeClass('modal-open');
       return $('.bio-overlay').hide();
     };
   });
