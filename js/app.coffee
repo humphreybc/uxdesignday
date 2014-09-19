@@ -39,6 +39,13 @@ $(document).ready ->
     $('#max-bio').fadeIn()
 
   $('.bio-modal-close').click (e) ->
+    bioFadeOut()
+
+  $(document).keyup (e) ->
+    if e.keyCode is 27
+      bioFadeOut()
+
+  bioFadeOut = () ->
     $('.bio-overlay').fadeOut()
 
 if document.body.clientWidth > 600

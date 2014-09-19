@@ -6,7 +6,7 @@
   linkOffsets = [];
 
   $(document).ready(function() {
-    var randbanner, s;
+    var bioFadeOut, randbanner, s;
     console.log('Like looking under the hood? Feel free to help make this site better at https://github.com/humphreybc/uxdesignday');
     if (document.body.clientWidth > 768) {
       s = skrollr.init({
@@ -48,9 +48,17 @@
       e.preventDefault();
       return $('#max-bio').fadeIn();
     });
-    return $('.bio-modal-close').click(function(e) {
-      return $('.bio-overlay').fadeOut();
+    $('.bio-modal-close').click(function(e) {
+      return bioFadeOut();
     });
+    $(document).keyup(function(e) {
+      if (e.keyCode === 27) {
+        return bioFadeOut();
+      }
+    });
+    return bioFadeOut = function() {
+      return $('.bio-overlay').fadeOut();
+    };
   });
 
   if (document.body.clientWidth > 600) {
