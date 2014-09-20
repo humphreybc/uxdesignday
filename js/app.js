@@ -67,10 +67,16 @@ $(document).ready(function() {
   modalShow = function(trigger) {
     var data, name, title, bio;
 
+    console.log (trigger);
+
     data = $(trigger).closest('.box-speaker').find('.bio');
     name = data.find('.name').text();
     title = data.find('.title').text();
     bio = data.find('.bio-desc').html();
+
+    url = name.replace(/\s/g, '');
+    console.log (url);
+    window.location.hash = url;
     
     modalCreate(name, title, bio);
     $('.bio-overlay').show();
@@ -97,6 +103,7 @@ $(document).ready(function() {
   // Destroys the modal
 
   modalHide = function() {
+    history.pushState("", document.title, window.location.pathname);
     $('.bio-overlay').remove();
   };
 
@@ -122,6 +129,25 @@ $(document).ready(function() {
     if (e.keyCode === 27) {
       modalHide();
     }
+  });
+
+  // Check to see if there's a hash to show speaker bio
+
+  if(window.location.hash) {
+    hash = window.location.hash;
+    console.log ('Hash exists!');
+  } else {
+    // Fragment doesn't exist
+  };
+
+  // Google Analytics event tracking
+
+  $('#ticket-button-top').on('click', function() {
+    ga('send', 'event', 'button', 'click', 'ticket-button-top');
+  });
+
+  $('#ticket-button-top').on('click', function() {
+    ga('send', 'event', 'button', 'click', 'ticket-button-bottom');
   });
 
 });
