@@ -46,9 +46,6 @@ section
     margin 20px 0px
     text-align center
 
-    h3
-      margin-bottom 0px
-
     .speaker-meta p
       font-size 0.75em
       line-height 1.3em
@@ -57,52 +54,12 @@ section
       color gray
       transition color 250ms
 
-    a:hover
-      color blue
-
     img
-      cursor pointer
       border-radius 6px
       transition opacity 250ms
 
       &:hover
         opacity 0.8
-
-.bio-overlay
-  position fixed
-  z-index 500
-  top 0
-  left 0
-  width 100%
-  height 100%
-  background-color white
-  display none
-
-  .bio-modal
-    position relative
-    z-index 1000
-    margin 0px auto
-    padding 30px
-    box-sizing border-box
-    max-width 680px
-    max-height 100%
-    overflow-y scroll
-    font-size 18px
-    text-align left
-    background-color white
-
-  .bio-modal-close
-    cursor pointer
-    float right
-    font-size 36px
-    padding 0px 5px
-    transition transform 500ms
-
-    &:hover
-      transform rotate(180deg)
-
-  .bio-modal-close:before
-    content "×"
 
 .sponsor-section
   min-height 400px

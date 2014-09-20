@@ -1,26 +1,6 @@
 module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    coffee: {
-      scripts: {
-        files: {
-          'public/js/app.js': 'js/app.coffee'
-        }
-      }
-    },
-    coffeelint: {
-      app: ['*.coffee'],
-      options: {
-        indentation: {
-          value: 2,
-          level: 'error'
-        },
-        max_line_length: {
-          value: 120,
-          level: 'error'
-        }
-      }
-    },
     stylus: {
       compile: {
         files: {'public/css/app.css': 'css/app.styl'}
@@ -28,8 +8,8 @@ module.exports = function(grunt) {
     },
     watch: {
       scripts: {
-        files: 'js/*.coffee',
-        tasks: ['coffeelint', 'coffee:scripts', 'uglify:app']
+        files: 'js/*.js',
+        tasks: ['concat:app', 'uglify:app']
       },
       styles: {
         files: 'css/**/*.styl',
@@ -45,20 +25,26 @@ module.exports = function(grunt) {
         atBegin: true
       },
     },
+    concat: {
+      app: {
+        files: {
+          'public/js/app.js': ['public/js/jquery-2.1.1.min.js', 'public/js/bootstrap-tooltip.js', 'js/app.js']
+        }
+      }
+    },
     uglify: {
       app: {
         files: {
-          'public/js/app.min.js': ['public/js/jquery-2.1.1.min.js', 'public/js/bootstrap-tooltip.js', 'public/js/app.js']
+          'public/js/app.min.js': ['public/js/jquery-2.1.1.min.js', 'public/js/bootstrap-tooltip.js', 'js/app.js']
         }
       }
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-coffee');
-  grunt.loadNpmTasks('grunt-coffeelint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-stylus');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
   grunt.registerTask('default', []);
@@ -68,9 +54,8 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('build', [
-    'coffeelint',
-    'coffee',
     'stylus',
+    'concat',
     'uglify'
   ]);
 };

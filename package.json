@@ -1,14 +1,16 @@
 {
   "name": "uxdesignday",
   "version": "2.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/humphreybc/uxdesignday.git"
+  },
   "devDependencies": {
-    "coffee-script": "latest",
     "grunt": "latest",
     "grunt-contrib-watch": "latest",
-    "grunt-contrib-coffee": "latest",
-    "grunt-coffeelint": "latest",
     "grunt-contrib-stylus": "latest",
     "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-concat": "~0.5.0",
     "grunt-contrib-uglify": "latest"
   }
 }
