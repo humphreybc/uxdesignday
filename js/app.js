@@ -146,7 +146,7 @@ $(document).ready(function() {
     ga('send', 'event', 'button', 'click', 'ticket-button-top');
   });
 
-  $('#ticket-button-top').on('click', function() {
+  $('#ticket-button-bottom').on('click', function() {
     ga('send', 'event', 'button', 'click', 'ticket-button-bottom');
   });
 
