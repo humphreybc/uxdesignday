@@ -92,7 +92,7 @@ $(document).ready(function() {
               <div class="bio-modal-inner"> \
                 <div class="bio-modal-close"></div> \
                 <h2>' + name + '</h2> \
-                <p><i>' + title + '</i></p> \
+                <p style="margin-top:0px;"><i>' + title + '</i></p> \
                 <p>' + bio + '</p> \
               </div> \
             </div> \
