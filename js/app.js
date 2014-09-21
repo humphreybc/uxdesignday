@@ -4,12 +4,12 @@ animating = false;
 linkOffsets = [];
 
 $(document).ready(function() {
+  var $site = $('.site');
   var modalHide, modalShow, randbanner, s;
   console.log('Like looking under the hood? Feel free to help make this site better at https://github.com/humphreybc/uxdesignday');
 
   // Tooltips
   // Only works if the window size is wider than 600px
-
   if (document.body.clientWidth > 600) {
     $('[rel=tooltip]').tooltip({
       placement: 'bottom',
@@ -63,20 +63,23 @@ $(document).ready(function() {
 
   // modalShow()
   // Finds the data from the HTML, constructs it with modalCreate(), and shows it
+  modalShow = function(bioName) {
+    
+    var $trigger = $('#' + bioName + 'Bio');
+    if(!$trigger){
+      return;
+    }
+    var name, title, bio;
 
-  modalShow = function(trigger) {
-    var data, name, title, bio;
-
-    console.log (trigger);
-
-    data = $(trigger).closest('.box-speaker').find('.bio');
-    name = data.find('.name').text();
-    title = data.find('.title').text();
-    bio = data.find('.bio-desc').html();
+    // these should really come from a js object instead of existing in the DOM but hey
+    name = $trigger.find('.name').text();
+    title = $trigger.find('.title').text();
+    bio = $trigger.find('.bio-desc').html();
 
     url = name.replace(/\s/g, '');
-    console.log (url);
-    window.location.hash = url;
+    history.pushState("", document.title, window.location.pathname + "#" + url);
+
+    $site.addClass('modal-open');
     
     modalCreate(name, title, bio);
     $('.bio-overlay').show();
@@ -84,11 +87,10 @@ $(document).ready(function() {
 
   // modalCreate()
   // Constructs a modal with the appropriate HTML markup
-
   modalCreate = function(name, title, bio) {
-    $('.site').append(
-        '<div class="bio-overlay"> \
-            <div class="bio-modal"> \
+    $site.append(
+        '<div class="bio-overlay fadeIn animated-quick"> \
+            <div class="bio-modal fadeInDownBig animated-quick"> \
               <div class="bio-modal-inner"> \
                 <div class="bio-modal-close"></div> \
                 <h2>' + name + '</h2> \
@@ -96,7 +98,7 @@ $(document).ready(function() {
                 <p>' + bio + '</p> \
               </div> \
             </div> \
-          </div>')
+          </div>');
   };
 
   // modalHide()
@@ -104,16 +106,17 @@ $(document).ready(function() {
 
   modalHide = function() {
     history.pushState("", document.title, window.location.pathname);
+    $site.removeClass('modal-open');
     $('.bio-overlay').remove();
   };
 
   // Clicking something with .modal-trigger runs modalShow()
 
-  $('.modal-trigger').click(function(e) {
+  $('.box-speaker').click(function(e) {
     var trigger;
     e.preventDefault();
     trigger = e.currentTarget;
-    modalShow(trigger);
+    modalShow($(trigger).data('name'));
   });
 
   // Closing the modal by clicking the X
@@ -134,11 +137,13 @@ $(document).ready(function() {
   // Check to see if there's a hash to show speaker bio
 
   if(window.location.hash) {
-    hash = window.location.hash;
-    console.log ('Hash exists!');
-  } else {
-    // Fragment doesn't exist
-  };
+    hash = (window.location.hash).replace('#', '');
+    navItems = ['get-tickets', 'speakers', 'sponsors', 'resources'];
+
+    if ($.inArray(hash, navItems) === -1) {
+      modalShow(hash);
+    }
+  }
 
   // Google Analytics event tracking
 
@@ -159,6 +164,7 @@ if (document.body.clientWidth > 600) {
   $(window).load(function() {
     var item, link, navLinks, timeout, _i, _len;
     navLinks = $('#nav-links li a');
+
     for (_i = 0, _len = navLinks.length; _i < _len; _i++) {
       item = navLinks[_i];
       link = $(item).attr('href');

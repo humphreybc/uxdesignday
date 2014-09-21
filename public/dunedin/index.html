@@ -36,7 +36,7 @@
 <div class="site">
   <header id="header">
     <div class="container">
-      <nav>
+      <nav class="nav">
         <a class="nav-logo" rel="tooltip" title="Beam me up, Scotty!" href="#top"></a>
         <ul id="nav-links">
           <li><a href="#get-tickets" title="Jump to Registration"><span class="icon icon-ticket"></span> Get tickets</a></li>
@@ -109,13 +109,13 @@
     <div class="container">
       <h1 class="center">Inspiring speakers &amp; mentors</h1>
       <ul>
-        <li class="box box-speaker">
+        <li class="box box-speaker" data-name="MaxJohns">
           <a href="" class="modal-trigger"><img src="speakers/max-johns.jpg" width='235' height='235' alt="Max Johns" /></a>
           <div class="speaker-meta">
             <a href="#" class="modal-trigger"><h3>Max Johns</h3></a>
             <p>Jade Software</p>
           </div>
-          <div class="bio">
+          <div class="bio" id="MaxJohnsBio">
             <h2 class="name">Max Johns</h2>
             <p class="title">Content + UX = Better business</p>
             <div class="bio-desc">
@@ -127,13 +127,13 @@
             </div>
           </div>
         </li>
-        <li class="box box-speaker">
+        <li class="box box-speaker" data-name="LyndaHenderson">
           <a href="" class="modal-trigger"><img src="speakers/lynda-henderson.jpg" width='235' height='235' alt="Lynda Henderson" /></a>
           <div class="speaker-meta">
             <a href="#" class="modal-trigger"><h3>Lynda Henderson</h3></a>
             <p>Otago Polytechnic</p>
           </div>
-          <div class="bio">
+          <div class="bio" id="LyndaHendersonBio">
             <h2 class="name">Lynda Henderson</h2>
             <p class="title">Talk title coming soon</p>
             <div class="bio-desc">
@@ -145,13 +145,13 @@
             </div>
           </div>
         </li>
-        <li class="box box-speaker">
+        <li class="box box-speaker" data-name="AnnaGuenther">
           <a href="#" class="modal-trigger"><img src="speakers/anna-guenther.jpg" width='235' height='235' alt="Anna Guenther" /></a>
           <div class="speaker-meta">
             <a href="#" class="modal-trigger"><h3>Anna Guenther</h3></a>
             <p>PledgeMe</p>
           </div>
-          <div class="bio">
+          <div class="bio" id="AnnaGuentherBio">
             <h2 class="name">Anna Guenther</h2>
             <p class="title">Thinking about the crowd in crowdfunding</p>
             <div class="bio-desc">
@@ -161,13 +161,13 @@
             </div>
           </div>
         </li>
-        <li class="box box-speaker box-last">
+        <li class="box box-speaker box-last" data-name="BenjaminHumphrey">
           <a href="#" class="modal-trigger"><img src="speakers/benjamin-humphrey.jpg" width='235' height='235' alt="Benjamin Humphrey" /></a>
           <div class="speaker-meta">
             <a href="#" class="modal-trigger"><h3>Benjamin Humphrey</h3></a>
             <p>Atlassian</p>
           </div>
-          <div class="bio">
+          <div class="bio" id="BenjaminHumphreyBio">
             <h2 class="name">Benjamin Humphrey</h2>
             <p class="title">Something about experiments</p>
             <div class="bio-desc">
@@ -179,13 +179,13 @@
             </div>
           </div>
         </li>
-        <li class="box box-speaker">
+        <li class="box box-speaker" data-name="NickBowmast">
           <a href="#" class="modal-trigger"><img src="speakers/nick-bowmast.jpg" width='235' height='235' alt="Nick Bowmast" /></a>
           <div class="speaker-meta">
             <a href="#" class="modal-trigger"><h3>Nick Bowmast</h3></a>
             <p>Bowmast Consulting</p>
           </div>
-          <div class="bio">
+          <div class="bio" id="NickBowmastBio">
             <h2 class="name">Nick Bowmast</h2>
             <p class="title">Picture or 1000 words? Visualising UX research</p>
             <div class="bio-desc">
@@ -286,6 +286,7 @@
           <a href="http://elliotjaystocks.com/blog/responsive-web-design-the-war-has-not-yet-been-won/" target="_blank">Responsive web design: the war has not yet been won</a>
           <a href="http://verifyapp.com/" target="_blank">Verify</a>
           <a href="https://hipchat.com/" target="_blank">HipChat</a>
+          <a href="http://daneden.github.io/animate.css/" target="_blank">Animate.css</a>
           <a href="http://a11yproject.com/" target="_blank">The Accessibility Project</a>
           <a href="http://placeit.breezi.com/" target="_blank">Place It by Breezi</a>
           <a href="https://developers.facebook.com/tools/debug" target="_blank">Facebook Debugger</a>
@@ -368,6 +369,6 @@
   ga('send', 'pageview');
 
 </script>
-<script type="text/javascript" src="../js/app.min.js"></script>
+<script type="text/javascript" src="../js/app.js"></script>
 </body>
 </html>
