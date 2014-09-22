@@ -423,6 +423,7 @@ linkOffsets = [];
 $(document).ready(function() {
   var $site = $('.site');
   var modalHide, modalShow, randbanner, s;
+  console.log('Version 2.0');
   console.log('Like looking under the hood? Feel free to help make this site better at https://github.com/humphreybc/uxdesignday');
 
   // Tooltips
