@@ -4,16 +4,27 @@ body
   background white
   font-family 'Open Sans', sans-serif
   color black
-  padding 80px 0px 0px
   margin 0px
   font-size 20px
   -webkit-font-smoothing antialiased
 
 hr
-  border 2px solid #eee
+  border 2px solid lightgray
 
+.site
+  overflow auto
+  top 0px
+  right 0px
+  bottom 0px 
+  left 0px
+  position fixed
+  padding 80px 0px 0px
+
+.modal-open
+  overflow hidden
 
 // A function that sets global properties with a dynamic color
+
 set-color(color)
   color color
   transition color 250ms

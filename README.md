@@ -2,7 +2,7 @@ UX Design Day
 =============
 [uxdesignday.org](http://uxdesignday.org)
 
-Source code for uxdesignday.org - static HTML, Stylus, and a little bit of Coffeescript.
+Source code for uxdesignday.org - static HTML, Stylus, and a little bit of JavaScript.
 
 ### TODO
 
@@ -25,7 +25,7 @@ Note: The UTF-8 charset is set in the HTTP header on the server, so if you see f
 
 ### Dependencies
 
-Uses [Coffeescript](http://coffeescript.org/) and [Stylus](http://learnboost.github.com/stylus/), and it's compiled using Node.js, so you'll need to install that on your computer. Also install npm (node package manager). More on that below.
+Uses regular old JavaScript with jQuery and [Stylus](http://learnboost.github.com/stylus/) compiled using Node.js, so you'll need to install that on your computer. Also install npm (node package manager). More on that below.
 
 IMPORTANT: The server doesn't compile anything, so you will need to compile locally into the /public directory and push that up to Git. Don't ignore that folder. Also don't delete it.
 
@@ -45,7 +45,7 @@ A Gruntfile with a 'dev' task is available for development.
 
     npm install
 
-#### Run 'grunt dev' to watch for changes in the Coffeescript and Stylus files.
+#### Run 'grunt dev' to watch for changes in the JS and Stylus files.
 
     grunt dev
 
@@ -65,7 +65,7 @@ CSS changes are made by changing the .styl files under /css/include. These will 
 
 #### Functionality (JS)
 
-JavaScript changes are made under /js/app.coffee and the Coffeescript will be compiled to JavaScript in /public/js/app.js. Grunt will also create a minified copy: /public/js/app.min.js.
+JavaScript changes are made under /js/app.js. This file is concatenated together with jQuery and any other libraries to /public/js/app.js. Grunt will also create a minified copy: /public/js/app.min.js.
 
 ### Deploying
 

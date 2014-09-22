@@ -23,10 +23,10 @@ section
   h1
     position absolute
     bottom 0
-    padding 20px
+    padding 40px
     box-sizing border-box
     color white
-    font-size 72px
+    font-size 3.6em
     line-height 1.5
     text-align center
 
@@ -46,10 +46,7 @@ section
     margin 20px 0px
     text-align center
 
-    h3
-      margin-bottom 0px
-
-    a, .speaker-title
+    .speaker-meta p
       font-size 0.75em
       line-height 1.3em
       display block
@@ -57,11 +54,12 @@ section
       color gray
       transition color 250ms
 
-    a:hover
-      color blue
-
     img
       border-radius 6px
+      transition opacity 250ms
+
+      &:hover
+        opacity 0.8
 
 .sponsor-section
   min-height 400px

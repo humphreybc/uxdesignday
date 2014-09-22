@@ -1,0 +1,118 @@
+.bio
+  display none
+
+.bio-overlay
+  position fixed
+  z-index 500
+  top 0
+  left 0
+  width 100%
+  height 100%
+  background-color white
+  display none
+
+  .bio-modal
+    position relative
+    z-index 1000
+    margin 0px auto
+    padding 30px
+    box-sizing border-box
+    max-width 680px
+    max-height 100%
+    overflow-y auto
+    font-size 0.9em
+    text-align left
+    background-color white
+
+  .bio-modal-close
+    margin-top 15px
+    display block
+    width 20px
+    height 20px
+    text-align center
+    line-height 18px
+    cursor pointer
+    float right
+    font-size 25px
+    transition transform 500ms
+
+    &:hover
+      transform rotate(180deg)
+
+  .bio-modal-close:before
+    content "×"
+
+
+
+
+
+/* Animated required class */
+.animated {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.animated-quick {
+  -webkit-animation-duration: 600ms;
+          animation-duration: 600ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+
+
+
+/* Fade in */
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+}
+
+
+
+
+/* Fade in down big */
+@-webkit-keyframes fadeInDownBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+            transform: translate3d(0, -2000px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes fadeInDownBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+            transform: translate3d(0, -2000px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.fadeInDownBig {
+  -webkit-animation-name: fadeInDownBig;
+          animation-name: fadeInDownBig;
+}

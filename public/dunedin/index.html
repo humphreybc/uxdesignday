@@ -1,8 +1,10 @@
 <!doctype html>
 
 <head>
-  <title>UX DESIGN DAY | An awesome design conference</title>
+  <!-- Comment the charset out before deploying -->
+  <!-- <meta charset="utf-8"> -->
 
+  <title>UX DESIGN DAY | An awesome design conference</title>
   <meta http-equiv="Content-Type" content="text/html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -24,22 +26,23 @@
     <script src="js/ie-icons.js"></script>
   <![endif]-->
 
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="../css/app.css">
   <link rel="shortcut icon" href="../img/favicon.png" />
 
 </head>
 
 <body>
+<div class="site">
   <header id="header">
     <div class="container">
-      <nav>
+      <nav class="nav">
         <a class="nav-logo" rel="tooltip" title="Beam me up, Scotty!" href="#top"></a>
         <ul id="nav-links">
           <li><a href="#get-tickets" title="Jump to Registration"><span class="icon icon-ticket"></span> Get tickets</a></li>
           <li><a href="#speakers" title="Jump to Speakers"><span class="icon icon-users"></span> Speakers</a></li>
-          <li style="display:none;"><a href="#sponsors" title="Jump to Sponsors"><span class="icon icon-flag"></span> Sponsors</a></li>
-          <li><a href="#resources" title="Jump to Resources"><span class="icon icon-book"></span> Resources</a></li>
+          <!-- <li><a href="#sponsors" title="Jump to Sponsors"><span class="icon icon-flag"></span> Sponsors</a></li> -->
+          <li><a href="#education" title="Jump to Education"><span class="icon icon-book"></span> Education</a></li>
         </ul>
       </nav>
     <div id="share-box">
@@ -51,20 +54,18 @@
     </div>
     </div>
   </header>
-
   <a id="top"></a>
 
   <section style="padding:0px;background:#222;">
     <div id="banner">
-      <h1><span data-0="opacity: 1;" data-400="opacity:0;">An awesome design conference in Dunedin, New Zealand.</span></h1>
+      <h1><span>An awesome design conference in Dunedin, New Zealand.</span></h1>
     </div>
   </section>
 
-  <a id="get-tickets"></a>
-
   <section>
+    <a id="get-tickets"></a>
     <div class="container overflow center">
-      <a href="http://blog.chalkle.com/ux-design-day-purchase-tickets/" class="button">Buy tickets now</a>
+      <a href="http://blog.chalkle.com/ux-design-day-purchase-tickets/" id="ticket-button-top" class="button">Buy tickets now</a>
       <div style="font-size:0.8em">
         <p>
           <b>How much:</b> $75 standard, $45 student<br>
@@ -101,91 +102,72 @@
     <img src="../img/wellington.jpg" style="width:100%;" />
   </section>
 
-  <a id="speakers"></a>
   <section>
+    <a id="speakers"></a>
     <div class="container">
-      <h1 class="center">Speakers to be announced soon</h1>
-      <!-- <h1 class="center">Inspiring speakers &amp; mentors</h1> -->
+      <h1 class="center">Inspiring speakers &amp; mentors</h1>
       <ul>
-        <li class="box box-speaker">
-          <img src="../img/placeholders/1.jpg" width='235' height='235' alt="TBA" />
-          <h3>Speaker</h3>
-          <a href="" target="_blank">To be announced</a>
+        <li class="box box-speaker" data-name="MaxJohns">
+          <a href=""><img src="speakers/max-johns.jpg" width='235' height='235' alt="Max Johns" /></a>
+          <div class="speaker-meta">
+            <a href="#"><h3>Max Johns</h3></a>
+            <p>Jade Software</p>
+          </div>
         </li>
-        <li class="box box-speaker">
-          <img src="../img/placeholders/3.jpg" width='235' height='235' alt="TBA" />
-          <h3>Speaker</h3>
-          <a href="" target="_blank">To be announced</a>
+        <li class="box box-speaker" data-name="LyndaHenderson">
+          <a href=""><img src="speakers/lynda-henderson.jpg" width='235' height='235' alt="Lynda Henderson" /></a>
+          <div class="speaker-meta">
+            <a href="#"><h3>Lynda Henderson</h3></a>
+            <p>Otago Polytechnic</p>
+          </div>
         </li>
-        <li class="box box-speaker">
-          <img src="../img/placeholders/2.jpg" width='235' height='235' alt="TBA" />
-          <h3>Speaker</h3>
-          <a href="" target="_blank">To be announced</a>
+        <li class="box box-speaker" data-name="AnnaGuenther">
+          <a href="#"><img src="speakers/anna-guenther.jpg" width='235' height='235' alt="Anna Guenther" /></a>
+          <div class="speaker-meta">
+            <a href="#"><h3>Anna Guenther</h3></a>
+            <p>PledgeMe</p>
+          </div>
         </li>
-        <li class="box box-speaker box-last">
+        <li class="box box-speaker box-last" data-name="BenjaminHumphrey">
+          <a href="#"><img src="speakers/benjamin-humphrey.jpg" width='235' height='235' alt="Benjamin Humphrey" /></a>
+          <div class="speaker-meta">
+            <a href="#"><h3>Benjamin Humphrey</h3></a>
+            <p>Atlassian</p>
+          </div>
+        </li>
+        <li class="box box-speaker" data-name="NickBowmast">
+          <a href="#"><img src="speakers/nick-bowmast.jpg" width='235' height='235' alt="Nick Bowmast" /></a>
+          <div class="speaker-meta">
+            <a href="#"><h3>Nick Bowmast</h3></a>
+            <p>Bowmast Consulting</p>
+          </div>
+        </li>
+        <!-- <li class="box box-speaker">
           <img src="../img/placeholders/4.jpg" width='235' height='235' alt="TBA" />
-          <h3>Speaker</h3>
-          <a href="" target="_blank">To be announced</a>
-        </li>
-        <li class="box box-speaker">
-          <img src="../img/placeholders/1.jpg" width='235' height='235' alt="TBA" />
-          <h3>Speaker</h3>
-          <a href="" target="_blank">To be announced</a>
-        </li>
-        <li class="box box-speaker">
-          <img src="../img/placeholders/4.jpg" width='235' height='235' alt="TBA" />
-          <h3>Speaker</h3>
-          <a href="" target="_blank">To be announced</a>
-        </li>
+          <div class="speaker-meta">
+            <a href="#"><h3>Speaker</h3></a>
+            <p>To be announced</p>
+          </div>
+        </li> -->
       </ul>
     </div>
   </section>
 
-  <a id="sponsors"></a>
-  <section class="sponsor-section" style="display:none;">
+<!--   <section class="sponsor-section">
+    <a id="sponsors"></a>
     <div class="container">
       <h1 class="center">Fantastic sponsors</h1>
       <ul>
         <li class="box">
           <a href="http://www.dunedin.govt.nz/" target="_blank"><img src="sponsors/doge-sponsor.png" width='240' height='100' alt="Dunedin City Council" /></a>
         </li>
-        <li class="box">
-          <a href="http://atlassian.com/" target="_blank"><img src="sponsors/doge-sponsor.png" width='240' height='100' alt="Atlassian" /></a>
-        </li>
-        <li class="box">
-          <a href="http://www.adinstruments.com/" target="_blank"><img src="sponsors/doge-sponsor.png" width='240' height='100' alt="ADInstruments" /></a>
-        </li>
-        <li class="box">
-          <a href="http://firebrandhq.co.nz" target="_blank"><img src="sponsors/doge-sponsor.png" width='240' height='100' alt="Firebrand" /></a>
-        </li>
-        <li class="box">
-          <a href="http://www.immersionmarketing.co.nz/" target="_blank"><img src="sponsors/doge-sponsor.png" width='240' height='100' alt="Immersion Marketing" /></a>
-        </li>
-        <li class="box">
-          <a href="http://www.otagopolytechnic.ac.nz/" target="_blank"><img src="sponsors/doge-sponsor.png" width='240' height='100' alt="Otago Polytechnic" /></a>
-        </li>
-        <li class="box">
-          <a href="http://newsplash.co.nz/" target="_blank"><img src="sponsors/doge-sponsor.png" width='240' height='100' alt="Chalkle" /></a>
-        </li>
-        <li class="box">
-          <a href="http://pocketsmith.com" target="_blank"><img src="sponsors/doge-sponsor.png" width='240' height='100' alt="Pocketsmith" /></a>
-        </li>
-        <li class="box">
-          <a href="http://timely.co.nz" target="_blank"><img src="sponsors/doge-sponsor.png" width='240' height='100' alt="Timely" /></a>
-        </li>
-        <li class="box">
-          <a href="http://brandaid.co.nz" target="_blank"><img src="sponsors/doge-sponsor.png" width='240' height='100' alt="BrandAid" /></a>
-        </li>
-        <li class="box">
-          <a href="http://chalkle.com/" target="_blank"><img src="sponsors/doge-sponsor.png" width='240' height='100' alt="Chalkle" /></a>
-        </li>
       </ul>
     </div>
-  </section>
+  </section> -->
 
   <section>
     <div class="container overflow center">
-      <a href="http://blog.chalkle.com/ux-design-day-purchase-tickets/" class="button">Buy tickets now</a>
+      <a href="http://blog.chalkle.com/ux-design-day-purchase-tickets/" id="ticket-button-bottom" class="button">Buy tickets now</a>
       <div style="font-size:0.8em">
         <p>
           <b>How much:</b> $75 standard, $45 student<br>
@@ -194,9 +176,8 @@
         </p>
       </div>
     </div>
+  <a id="education"></a>
   </section>
-
-  <a id="resources"></a>
 
   <section class="white-section">
     <div class="container resource-section">
@@ -217,7 +198,7 @@
           <a href="http://www.chromeexperiments.com/" target="_blank">Chrome Experiments</a>
           <a href="http://inspirationti.me/" target="_blank">Inspiration Time</a>
           <a href="http://shouldiworkforfree.com/clean.html" target="_blank">Should I work for free?</a>
-          <a href="http://99u.com/" target="_blank">99U</a>
+          <a href="http://design.atlassian.com" target="_blank">Atlassian Design Guidelines</a>
           <a href="http://8tracks.com" target="_blank">8tracks</a>
           <a href="http://browserquest.mozilla.org/" target="_blank">BrowserQuest by Mozilla</a>
           <a href="http://www.logodesignlove.com/" target="_blank">Logo Design Love</a>
@@ -237,7 +218,6 @@
           <a href="http://www.amazon.com/Thinking-Type-2nd-revised-expanded/dp/1568989695/ref=sr_1_1?ie=UTF8&qid=1364784576&sr=8-1&keywords=typography" target="_blank">Thinking With Type</a>
           <a href="http://www.amazon.com/Mastering-Type-Essential-Typography-Design/dp/1440313695/ref=sr_1_24?ie=UTF8&qid=1364784599&sr=8-24&keywords=typography" target="_blank">Mastering Type</a>
           <a href="http://typographica.org/" target="_blank">Typographica</a>
-          <a href="http://pixelsdaily.com/" target="_blank">Pixels Daily</a>
           <a href="http://illustrationclass.com/" target="_blank">Illustration Class</a>
           <a href="http://thedrawingarm.com.au/" target="_blank">The Drawing Arm</a>
         </li>
@@ -249,14 +229,16 @@
           <a href="http://www.unheap.com/" target="_blank">Unheap &mdash; jQuery Plugins</a>
           <a href="http://letteringjs.com/" target="_blank">LetteringJS</a>
           <a href="http://learnboost.github.com/stylus/" target="_blank">Stylus</a>
+          <a href="http://bohemiancoding.com/sketch/" target="_blank">Sketch</a>
           <a href="http://elliotjaystocks.com/blog/responsive-web-design-the-war-has-not-yet-been-won/" target="_blank">Responsive web design: the war has not yet been won</a>
           <a href="http://verifyapp.com/" target="_blank">Verify</a>
-          <a href="http://conversat.io/" target="_blank">Conversat.io</a>
+          <a href="https://hipchat.com/" target="_blank">HipChat</a>
+          <a href="http://daneden.github.io/animate.css/" target="_blank">Animate.css</a>
           <a href="http://a11yproject.com/" target="_blank">The Accessibility Project</a>
           <a href="http://placeit.breezi.com/" target="_blank">Place It by Breezi</a>
           <a href="https://developers.facebook.com/tools/debug" target="_blank">Facebook Debugger</a>
-          <a href="https://github.com/" target="_blank">Github</a>
-          <a href="http://asana.com" target="_blank">Asana Task Management</a>
+          <a href="https://bitbucket.org/" target="_blank">Bitbucket</a>
+          <a href="http://stackoverflow.com/" target="_blank">StackOverflow</a>
           <a href="http://thrivesolo.com/" target="_blank">Solo Project Management</a>
           <a href="http://www.amazon.com/Making-Breaking-Grid-Graphic-Workshop/dp/1592531253/ref=sr_1_30?ie=UTF8&qid=1364784599&sr=8-30&keywords=typography" target="_blank">Making and Breaking the Grid</a>
           <a href="http://www.amazon.com/Designing-Interaction-Creating-Innovative-Applications/dp/0321643399/ref=sr_1_1?s=books&ie=UTF8&qid=1364784748&sr=1-1&keywords=dan+saffer" target="_blank">Designing for Interaction</a>
@@ -266,16 +248,17 @@
           <h2>Education</h2>
           <a href="http://uxmyths.com/" target="_blank">UX Myths</a>
           <a href="http://practicaltypography.com/" target="_blank">Butterick's Practical Typography</a>
-          <a href="http://hackdesign.org/courses/" target="_blank">Hack Design</a>
+          <a href="http://robertlenne.com/requiredreading/" target="_blank">Required reading for Product Designers</a>
           <a href="http://www.uxapprentice.com/" target="_blank">UX Apprentice</a>
+          <a href="http://www.gv.com/design/" target="_blank">Google Ventures Design blog</a>
           <a href="http://www.amazon.com/Universal-Principles-Design-Revised-Updated/dp/1592535879/ref=sr_1_4?s=books&ie=UTF8&qid=1364784813&sr=1-4&keywords=100+principles+of+design" target="_blank">Universal Principles of Design</a>
           <a href="http://teamtreehouse.com/" target="_blank">Team Treehouse</a>
           <a href="http://designprincipl.es/" target="_blank">30 Design Principles</a>
           <a href="http://www.codecademy.com/" target="_blank">Codecademy</a>
+          <a href="http://www.gv.com/lib/design-details" target="_blank">Why you should move that button 3px to the left</a>
           <a href="http://type.method.ac/" target="_blank">Kern Typing Game</a>
           <a href="http://shape.method.ac/" target="_blank">Shape Type</a>
           <a href="http://color.method.ac/" target="_blank">Color Game</a>
-          <a href="http://stackoverflow.com/" target="_blank">StackOverflow</a>
           <a href="https://github.com/humphreybc/designer-interview" target="_blank">How to interview a designer</a>
           <a href="http://usabilitypost.com/" target="_blank">Usability Post</a>
           <a href="http://www.smashingmagazine.com/" target="_blank">Smashing Magazine</a>
@@ -322,15 +305,17 @@
       </div>
     </footer>
   </section>
-  <script type="text/javascript" src="../js/app.min.js"></script>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-43717648-1', 'uxdesignday.org');
-    ga('send', 'pageview');
-  </script>
+  ga('create', 'UA-43717648-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript" src="../js/app.min.js"></script>
 </body>
 </html>
