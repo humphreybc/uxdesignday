@@ -39,7 +39,7 @@ $(document).ready(function() {
 
   $('nav a').click(function() {
     animating = true;
-    $('html, body').animate({
+    $('.site').animate({
       scrollTop: ($($(this).attr('href')).offset().top)
     }, 500, function() {
       checkOffset($(window).scrollTop());
@@ -168,6 +168,7 @@ if (document.body.clientWidth > 600) {
     for (_i = 0, _len = navLinks.length; _i < _len; _i++) {
       item = navLinks[_i];
       link = $(item).attr('href');
+      debugger;
       linkOffsets.push([link, typeof $(link).offset() === 'undefined' ? null : ~~$(link).offset().top - 100]);
     }
 
