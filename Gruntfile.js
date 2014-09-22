@@ -28,14 +28,14 @@ module.exports = function(grunt) {
     concat: {
       app: {
         files: {
-          'public/js/app.js': ['public/js/jquery-2.1.1.min.js', 'public/js/bootstrap-tooltip.js', 'js/app.js']
+          'public/js/app.js': ['public/js/jquery-2.1.1.min.js', 'public/js/bootstrap-tooltip.js', 'js/bios.js', 'js/app.js']
         }
       }
     },
     uglify: {
       app: {
         files: {
-          'public/js/app.min.js': ['public/js/jquery-2.1.1.min.js', 'public/js/bootstrap-tooltip.js', 'js/app.js']
+          'public/js/app.min.js': ['public/js/jquery-2.1.1.min.js', 'public/js/bootstrap-tooltip.js', 'js/bios.js', 'js/app.js']
         }
       }
     }

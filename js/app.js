@@ -34,20 +34,6 @@ $(document).ready(function() {
     opacity: 1
   }, 1000);
 
-  // Main navigation
-  // See functions below
-
-  $('nav a').click(function() {
-    animating = true;
-    $('.site').animate({
-      scrollTop: ($($(this).attr('href')).offset().top)
-    }, 500, function() {
-      checkOffset($(window).scrollTop());
-      return animating = false;
-    });
-    return false;
-  });
-
   // Resource roulette
   // Randomly chooses a link from the list in the HTML
 
@@ -64,25 +50,19 @@ $(document).ready(function() {
   // modalShow()
   // Finds the data from the HTML, constructs it with modalCreate(), and shows it
   modalShow = function(bioName) {
-    
-    var $trigger = $('#' + bioName + 'Bio');
-    if(!$trigger){
-      return;
-    }
-    var name, title, bio;
+    var bioInfo = bios[bioName];
+    var name = bioInfo.name;
+    var title = bioInfo.title;
+    var bio = bioInfo.bio;
+    var url = name.replace(/\s/g, '');
 
-    // these should really come from a js object instead of existing in the DOM but hey
-    name = $trigger.find('.name').text();
-    title = $trigger.find('.title').text();
-    bio = $trigger.find('.bio-desc').html();
-
-    url = name.replace(/\s/g, '');
     history.pushState("", document.title, window.location.pathname + "#" + url);
 
     $site.addClass('modal-open');
     
     modalCreate(name, title, bio);
     $('.bio-overlay').show();
+
   };
 
   // modalCreate()
@@ -110,7 +90,7 @@ $(document).ready(function() {
     $('.bio-overlay').remove();
   };
 
-  // Clicking something with .modal-trigger runs modalShow()
+  // Clicking something with .box-speaker runs modalShow()
 
   $('.box-speaker').click(function(e) {
     var trigger;
@@ -138,7 +118,7 @@ $(document).ready(function() {
 
   if(window.location.hash) {
     hash = (window.location.hash).replace('#', '');
-    navItems = ['get-tickets', 'speakers', 'sponsors', 'resources'];
+    navItems = ['get-tickets', 'speakers', 'sponsors', 'education'];
 
     if ($.inArray(hash, navItems) === -1) {
       modalShow(hash);
@@ -155,12 +135,33 @@ $(document).ready(function() {
     ga('send', 'event', 'button', 'click', 'ticket-button-bottom');
   });
 
+  // Main navigation
+  // See functions below
+
+  $('nav a').click(function() {
+    animating = true;
+
+    var offset = $site.scrollTop();
+    var $anchor = $($(this).attr('href'));
+    var anchorPosition = offset + ($anchor.offset().top);
+
+    $site.animate({
+      scrollTop: anchorPosition
+    }, 500, function() {
+      checkOffset($site.scrollTop());
+      return animating = false;
+    });
+    return false;
+  });
+
 });
 
 // Code to calculate scroll positions for navigation
 // Only runs when the screen is wider than 600px
-
 if (document.body.clientWidth > 600) {
+  
+  var $site = $('.site');
+
   $(window).load(function() {
     var item, link, navLinks, timeout, _i, _len;
     navLinks = $('#nav-links li a');
@@ -168,14 +169,13 @@ if (document.body.clientWidth > 600) {
     for (_i = 0, _len = navLinks.length; _i < _len; _i++) {
       item = navLinks[_i];
       link = $(item).attr('href');
-      debugger;
       linkOffsets.push([link, typeof $(link).offset() === 'undefined' ? null : ~~$(link).offset().top - 100]);
     }
 
     linkOffsets.reverse();
-    checkOffset($(window).scrollTop());
+    checkOffset($site.scrollTop());
     timeout = null;
-    return $(window).scroll(function() {
+    return $site.scroll(function() {
       var scrollTop;
       scrollTop = $(this).scrollTop();
       if (!timeout && !animating) {
