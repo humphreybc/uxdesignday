@@ -2,7 +2,7 @@
 
 <head>
   <!-- Comment the charset out before deploying -->
-  <!-- <meta charset="utf-8"> -->
+  <meta charset="utf-8">
 
   <title>UX DESIGN DAY | An awesome design conference</title>
   <meta http-equiv="Content-Type" content="text/html">
@@ -34,14 +34,15 @@
 
 <body>
 <div class="site">
+  <a id="top"></a>
   <header id="header">
     <div class="container">
       <nav class="nav">
         <a class="nav-logo" rel="tooltip" title="Beam me up, Scotty!" href="#top"></a>
         <ul id="nav-links">
           <li><a href="#get-tickets" title="Jump to Registration"><span class="icon icon-ticket"></span> Get tickets</a></li>
+          <li><a href="#sponsors" title="Jump to Sponsors"><span class="icon icon-flag"></span> Sponsors</a></li>
           <li><a href="#speakers" title="Jump to Speakers"><span class="icon icon-users"></span> Speakers</a></li>
-          <!-- <li><a href="#sponsors" title="Jump to Sponsors"><span class="icon icon-flag"></span> Sponsors</a></li> -->
           <li><a href="#education" title="Jump to Education"><span class="icon icon-book"></span> Education</a></li>
         </ul>
       </nav>
@@ -54,7 +55,6 @@
     </div>
     </div>
   </header>
-  <a id="top"></a>
 
   <section style="padding:0px;background:#222;">
     <div id="banner">
@@ -98,6 +98,25 @@
 
   </section>
 
+  <section class="sponsor-section">
+    <a id="sponsors"></a>
+    <div class="container">
+      <ul>
+        <li class="box">
+          <a href="http://www.op.ac.nz/" target="_blank"><img src="sponsors/otago-polytechnic.png" width='240' height='100' alt="Otago Polytechnic" /></a>
+        </li>
+        <li class="box">
+          <a href="http://www.adinstruments.com/" target="_blank"><img src="sponsors/adinstruments.png" width='240' height='100' alt="ADInstruments" /></a>
+        </li>
+        <li class="box">
+          <a href="https://www.atlassian.com/" target="_blank"><img src="sponsors/atlassian.png" width='240' height='100' alt="Atlassian" /></a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="gap"></div>
+
   <section style="padding:0px">
     <img src="../img/wellington.jpg" style="width:100%;" />
   </section>
@@ -107,6 +126,27 @@
     <div class="container">
       <h1 class="center">Inspiring speakers &amp; mentors</h1>
       <ul>
+        <li class="box box-speaker" data-name="LanceWiggs">
+          <a href=""><img src="speakers/lance-wiggs.jpg" width='235' height='235' alt="Lance Wiggs" /></a>
+          <div class="speaker-meta">
+            <a href=""><h3>Lance Wiggs</h3></a>
+            <p>Investor</p>
+          </div>
+        </li>
+        <li class="box box-speaker" data-name="DanNewman">
+          <a href=""><img src="speakers/dan-newman.jpg" width='235' height='235' alt="Dan Newman" /></a>
+          <div class="speaker-meta">
+            <a href=""><h3>Dan Newman</h3></a>
+            <p>Xero</p>
+          </div>
+        </li>
+        <li class="box box-speaker box-last" data-name="AnnaGuenther">
+          <a href=""><img src="speakers/anna-guenther.jpg" width='235' height='235' alt="Anna Guenther" /></a>
+          <div class="speaker-meta">
+            <a href=""><h3>Anna Guenther</h3></a>
+            <p>PledgeMe</p>
+          </div>
+        </li>
         <li class="box box-speaker" data-name="MaxJohns">
           <a href=""><img src="speakers/max-johns.jpg" width='235' height='235' alt="Max Johns" /></a>
           <div class="speaker-meta">
@@ -121,14 +161,14 @@
             <p>Otago Polytechnic</p>
           </div>
         </li>
-        <li class="box box-speaker" data-name="AnnaGuenther">
-          <a href=""><img src="speakers/anna-guenther.jpg" width='235' height='235' alt="Anna Guenther" /></a>
+        <li class="box box-speaker box-last" data-name="AdamMoody">
+          <a href=""><img src="speakers/adam-moody.jpg" width='235' height='235' alt="Adam Moody" /></a>
           <div class="speaker-meta">
-            <a href=""><h3>Anna Guenther</h3></a>
-            <p>PledgeMe</p>
+            <a href=""><h3>Adam Moody</h3></a>
+            <p>Fisher &amp; Paykel</p>
           </div>
         </li>
-        <li class="box box-speaker box-last" data-name="BenjaminHumphrey">
+        <li class="box box-speaker" data-name="BenjaminHumphrey">
           <a href=""><img src="speakers/benjamin-humphrey.jpg" width='235' height='235' alt="Benjamin Humphrey" /></a>
           <div class="speaker-meta">
             <a href=""><h3>Benjamin Humphrey</h3></a>
@@ -142,28 +182,16 @@
             <p>Bowmast Consulting</p>
           </div>
         </li>
-        <!-- <li class="box box-speaker">
-          <img src="../img/placeholders/4.jpg" width='235' height='235' alt="TBA" />
+        <li class="box box-speaker box-last" data-name="AnnieVanDerWal">
+          <a href=""><img src="speakers/annie-van-der-wal.jpg" width='235' height='235' alt="Annie van der Wal" /></a>
           <div class="speaker-meta">
-            <a href="#"><h3>Speaker</h3></a>
-            <p>To be announced</p>
+            <a href=""><h3>Annie van der Wal</h3></a>
+            <p>Fisher &amp; Paykel</p>
           </div>
-        </li> -->
-      </ul>
-    </div>
-  </section>
-
-<!--   <section class="sponsor-section">
-    <a id="sponsors"></a>
-    <div class="container">
-      <h1 class="center">Fantastic sponsors</h1>
-      <ul>
-        <li class="box">
-          <a href="http://www.dunedin.govt.nz/" target="_blank"><img src="sponsors/doge-sponsor.png" width='240' height='100' alt="Dunedin City Council" /></a>
         </li>
       </ul>
     </div>
-  </section> -->
+  </section>
 
   <section>
     <div class="container overflow center">
@@ -176,10 +204,10 @@
         </p>
       </div>
     </div>
-  <a id="education"></a>
   </section>
 
   <section class="white-section">
+    <a id="education"></a>
     <div class="container resource-section">
       <div class="center">
         <h1>Useful design resources</h1>
@@ -250,6 +278,7 @@
           <a href="http://practicaltypography.com/" target="_blank">Butterick's Practical Typography</a>
           <a href="http://robertlenne.com/requiredreading/" target="_blank">Required reading for Product Designers</a>
           <a href="http://www.uxapprentice.com/" target="_blank">UX Apprentice</a>
+          <a href="http://mailchimp.com/resources/email-design-guide/" target="_blank">Mailchimp Email Design Guide</a>
           <a href="http://www.gv.com/design/" target="_blank">Google Ventures Design blog</a>
           <a href="http://www.amazon.com/Universal-Principles-Design-Revised-Updated/dp/1592535879/ref=sr_1_4?s=books&ie=UTF8&qid=1364784813&sr=1-4&keywords=100+principles+of+design" target="_blank">Universal Principles of Design</a>
           <a href="http://teamtreehouse.com/" target="_blank">Team Treehouse</a>
@@ -282,15 +311,15 @@
     <footer>
       <div class="container center">
         <ul>
-          <li>Founded by 
-            <a href="http://twitter.com/humphreybc" target="_blank">Benjamin Humphrey</a> and 
+          <li>Founded by
+            <a href="http://twitter.com/humphreybc" target="_blank">Benjamin Humphrey</a> and
             <a href="https://twitter.com/minnie_rose" target="_blank">Philippa Dawe.</a>
           </li>
 
-          <li>With help from 
-            <a href="https://twitter.com/VFStevenson" target="_blank">Veronica Stevenson,</a> 
+          <li>With help from
+            <a href="https://twitter.com/VFStevenson" target="_blank">Veronica Stevenson,</a>
             <a href="https://twitter.com/kittyruth" target="_blank">Kitty Higbee,</a>
-            <a href="https://twitter.com/samvtran" target="_blank">Sam Tran,</a> 
+            <a href="https://twitter.com/samvtran" target="_blank">Sam Tran,</a>
             <a href="https://twitter.com/designdavenz" target="_blank">Dave Strydom,</a> and
             <a href="https://twitter.com/charliegavey" target="_blank">Charlie Gavey.</a>
           </li>
