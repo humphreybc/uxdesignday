@@ -62,17 +62,19 @@ section
         opacity 0.8
 
 .sponsor-section
-  min-height 400px
+  overflow hidden
 
   img
     margin 15px 40px 15px
     border none
-    opacity 0.9
+    opacity 1
+    transition opacity 250ms
 
     &:hover
-      opacity 1
+      opacity 0.8
 
-#get-tickets, #speakers, #sponsors, #resources
+#top, #get-tickets, #speakers, #sponsors, #education
   position: relative;
   display: block;
   top: -100px;
+

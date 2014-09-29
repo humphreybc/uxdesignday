@@ -55,7 +55,7 @@ $(document).ready(function() {
     var name = bioInfo.name;
     var title = bioInfo.title;
     var bio = bioInfo.bio;
-    var url = name.replace(/\s/g, '');
+    var url = bioName;
 
     history.pushState("", document.title, window.location.pathname + "#" + url);
 

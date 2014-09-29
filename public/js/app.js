@@ -368,6 +368,42 @@
 
 var bios = {
 
+  LanceWiggs: {
+    name: 'Lance Wiggs',
+    title: 'Talk title coming soon',
+    bio: '<p>Lance is an investor and advisor who believes that end user centred design drives growth, sustainability and value. He often gets grumpy about poor end user experiences, and getting better at not sharing.</p> \
+          <p>Lance is a Better by Capital practitioner, helping companies become investable in this NZTE program. Prior to this he was a Better by Design practitioner, helping companies on their journey to becoming design-led. He is a member of two Return on Science investment committees, a program that helps turn research based IP into licensing deals and growing companies.</p> \
+          <p>In 2013 he launched and failed, then, in 2014, relaunched Punakaiki Fund, which invests in early stage Design-led, Technology and Internet based businesses, including Dunedin’s own Timely and Wellington’s Mindscape.</p> \
+          <p>Lance is a director and investor in a number of businesses, including Pocketsmith, 200Square, My Tours and, through Punakaiki Fund, Vibe Communications and InfluxHQ. He tried and failed to buy shares in Trade Me in 2003, succeeded in buying shares in Vend, wished he had followed his own advice and invested earlier in Xero and failed to get Pacific Fibre off the ground.</p> \
+          <p>Lance has a wide range of business experience, ranging from Fairfax Digital to BHP Billiton, McKinsey and Cadimage Group. He was a co-fouder of Pacific Fibre, is a Councilor for InternetNZ and founded Powerkiwi, which was once second on the Deloitte Fast 50. He writes an advice column at Idealog and at <a href="http://lancewiggs.com/" target="_blank">Lancewiggs.com.</a></p>'
+  },
+
+
+  AnnieVanDerWal: {
+    name: 'Annie van der Wal',
+    title: 'UX design for global markets',
+    bio: '<p>Annie van der Wal has been part of the award winning Industrial Design Team at Fisher & Paykel for over 7 years. Annie was born and raised in the Netherlands and after a career in Human Resources decided to pursue her real passion, design.</p> \
+          <p>In her role as an Industrial Designer she has always put an emphasis on the end user. Putting the customer at the centre, drawing out insights around their routines, rituals, expectations and patterns of use is at the core of her design approach.</p>'
+  },
+
+
+  AdamMoody: {
+    name: 'Adam Moody',
+    title: 'From concept to market',
+    bio: '<p>Adam Moody has been part of the award winning Industrial Design Team at Fisher & Paykel for over 6 years.</p> \
+          <p>Adam is passionate about both design and photography, being one of the key members of Fisher & Paykel’s food blog, Our Kitchen.  Adam enjoys making use of the opportunities customer insight research provides to help drive product development forward.</p> \
+          <p>As an Industrial Designer Adam believes that understanding all customers, including retailers and kitchen designers/architects, are a vital connection to the overall design process.</p>'
+  },
+
+  DanNewman: {
+    name: 'Dan Newman',
+    title: 'Buy Experiences, Not Things',
+    bio: '<p>Dan is the Global Marketing Design Director at Xero where he leads the design of <a href="http://xero.com" target="_blank">xero.com</a> and all things brand. With a team spread around the world he’s helping convince small businesses to “Try Xero for free”.</p> \
+          <p>Previously Dan designed skeuomorphic mobile & tablet applications for large media companies. He’s very sorry for the harm he caused. Before that, websites for clothing made from merino sheep & interactives for museums with colossal squids. \
+          <p>He lives in Wellington where he enjoys craft beer and <a href="http://www.instagram.com/danserif" target="_blank">taking photos.</a></p> \
+          <p>Dan most recently talked about “The Science of Design” at Gather in Auckland.</p>'
+  },
+
 
   MaxJohns: {
     name: 'Max Johns',
@@ -397,7 +433,7 @@ var bios = {
 
   BenjaminHumphrey: {
     name: 'Benjamin Humphrey',
-    title: 'Something about experiments',
+    title: 'Talk title coming soon',
     bio: '<p>Benjamin is a product designer at <a href="https://www.atlassian.com/" target="_blank">Atlassian</a> in Sydney and is the founder of this very conference, UX Design Day.<p> \
           <p>In the past he’s been a co-founder of <a href="http://www.omgubuntu.co.uk/" target="_blank">OMG! Ubuntu!,</a> founder of The Ubuntu Manual Project, and Design Lead for <a href="https://delicious.com/" target="_blank">delicious.com</a> at AVOS. Benjamin has also spoken about design at conferences &amp; meetups, freelanced for a while, and competed in Startup Weekend.<p> \
           <p>You can find Benjamin on Twitter at <a href="https://twitter.com/humphreybc" target="_blank">@humphreybc,</a> and follow his blog at <a href="http://humphreybc.com/" target="_blank">humphreybc.com.</a></p>'
@@ -472,7 +508,7 @@ $(document).ready(function() {
     var name = bioInfo.name;
     var title = bioInfo.title;
     var bio = bioInfo.bio;
-    var url = name.replace(/\s/g, '');
+    var url = bioName;
 
     history.pushState("", document.title, window.location.pathname + "#" + url);
 
