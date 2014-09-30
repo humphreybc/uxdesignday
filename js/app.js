@@ -142,6 +142,7 @@ $(document).ready(function() {
 
     var offset = $(window).scrollTop();
     var $anchor = $($(this).attr('href'));
+    // Commenting this out kind of fixes it because offset is not being added to the anchor position
     // var anchorPosition = offset + ($anchor.offset().top);
     var anchorPosition = ($anchor.offset().top);
 
