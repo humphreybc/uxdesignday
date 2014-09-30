@@ -595,13 +595,13 @@ $(document).ready(function() {
 
     var offset = $(window).scrollTop();
     var $anchor = $($(this).attr('href'));
+    // Commenting this out kind of fixes it because offset is not being added to the anchor position
     // var anchorPosition = offset + ($anchor.offset().top);
     var anchorPosition = ($anchor.offset().top);
-
     $('html, body').animate({
       scrollTop: anchorPosition
     }, 500, function() {
-      checkOffset($(window).scrollTop);
+      checkOffset($(window).scrollTop());
       return animating = false;
     });
     return false;
