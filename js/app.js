@@ -2,10 +2,10 @@
 
 var animating = false;
 var linkOffsets = [];
+var currentPosition = 0;
 
 $(document).ready(function() {
-  var $site = $('.site');
-  console.log('Version 2.0');
+  console.log('Version 2.1');
   console.log('Like looking under the hood? Feel free to help make this site better at https://github.com/humphreybc/uxdesignday');
 
   // Tooltips
@@ -44,7 +44,7 @@ $(document).ready(function() {
     window.open(resourceLinks[Math.floor(Math.random() * resourceLinks.length)].getAttribute('href'), '_blank');
   });
 
-  // Speaker bios
+  // Speaker bio modals
   // Code to construct modal from HTML data, show it on click, and then destroy it on close
 
   // modalShow()
@@ -56,23 +56,26 @@ $(document).ready(function() {
     var bio = bioInfo.bio;
     var url = bioName;
 
-    history.pushState("", document.title, window.location.pathname + "#" + url);
+    history.pushState('', document.title, window.location.pathname + '#' + url);
 
-    $site.addClass('modal-open');
+    currentPosition = $(window).scrollTop();
+
+    setTimeout(function() {
+      $('body').addClass('modal-open');
+    }, 500);
 
     modalCreate(name, title, bio);
-    $('.bio-overlay').show();
-
+    $('.modal-overlay').show();
   };
 
   // modalCreate()
   // Constructs a modal with the appropriate HTML markup
   var modalCreate = function(name, title, bio) {
-    $site.append(
-        '<div class="bio-overlay fadeIn animated-quick"> \
-            <div class="bio-modal fadeInDownBig animated-quick"> \
-              <div class="bio-modal-inner"> \
-                <div class="bio-modal-close"></div> \
+    $('body').append(
+        '<div class="modal-overlay fadeIn animated-quick"> \
+            <div class="modal-content fadeInDownBig animated-quick"> \
+              <div class="modal-inner"> \
+                <div class="modal-close"></div> \
                 <h2>' + name + '</h2> \
                 <p style="margin-top:0px;"><i>' + title + '</i></p> \
                 <p>' + bio + '</p> \
@@ -85,9 +88,17 @@ $(document).ready(function() {
   // Destroys the modal
 
   var modalHide = function() {
-    history.pushState("", document.title, window.location.pathname);
-    $site.removeClass('modal-open');
-    $('.bio-overlay').remove();
+    history.pushState('', document.title, window.location.pathname);
+    $('body').removeClass('modal-open');
+
+    $(window).scrollTop(currentPosition);
+
+    $('.modal-overlay').removeClass('fadeIn');
+    $('.modal-overlay').addClass('fadeOut');
+
+    setTimeout(function() {
+      $('.modal-overlay').remove();
+    }, 500);
   };
 
   // Clicking something with .box-speaker runs modalShow()
@@ -101,7 +112,7 @@ $(document).ready(function() {
 
   // Closing the modal by clicking the X
 
-  $(document).on('click', '.bio-modal-close', function(e) {
+  $(document).on('click', '.modal-close', function(e) {
     e.preventDefault();
     modalHide();
   });
@@ -141,17 +152,18 @@ $(document).ready(function() {
   $('nav a').click(function() {
     animating = true;
 
-    var offset = $site.scrollTop();
+    var offset = $('body').scrollTop();
     var $anchor = $($(this).attr('href'));
-    var anchorPosition = offset + ($anchor.offset().top);
+    var anchorPosition = ($anchor.offset().top);
 
-    $site.animate({
+    $('html, body').animate({
       scrollTop: anchorPosition
     }, 500, function() {
-      checkOffset($site.scrollTop());
+      checkOffset($(window).scrollTop());
       return animating = false;
     });
     return false;
+
   });
 
 });
@@ -159,33 +171,35 @@ $(document).ready(function() {
 // Code to calculate scroll positions for navigation
 // Only runs when the screen is wider than 600px
 if (document.body.clientWidth > 600) {
-  var $site = $('.site');
 
   $(window).load(function() {
     var navLinks = $('#nav-links').find('li a');
-    var initialOffset = $('.site').scrollTop();
+    var initialOffset = $(window).scrollTop();
     for (var i = 0, len = navLinks.length; i < len; i++) {
       var item = navLinks[i];
       var link = $(item).attr('href');
+      // ~~ forces integer context so we don't accidentally subtract in string context
       linkOffsets.push([link, typeof $(link).offset() === 'undefined' ? null : ~~$(link).offset().top + initialOffset]);
     }
-
+    // Going bottom up so we catch the active link furthest down the page
     linkOffsets.reverse();
-    checkOffset($site.scrollTop());
+
+    checkOffset($(window).scrollTop());
+
     var timeout = null;
-    return $site.scroll(function() {
+    return $(window).scroll(function() {
       var scrollTop;
       scrollTop = $(this).scrollTop();
       if (!timeout && !animating) {
         return timeout = setTimeout(function() {
           timeout = null;
           return checkOffset(scrollTop);
-        }, 100);
+        }, 200);
       }
     });
   });
 
-  /** How many pixels above a section before the navigation changes */
+  // How many pixels above a section before the navigation changes
   var offsetBuffer = 50;
 
   var checkOffset = function(scrollTop) {
