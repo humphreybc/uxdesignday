@@ -455,6 +455,7 @@ var bios = {
 
 var animating = false;
 var linkOffsets = [];
+var currentPosition = 0;
 
 $(document).ready(function() {
   console.log('Version 2.1');
@@ -496,7 +497,7 @@ $(document).ready(function() {
     window.open(resourceLinks[Math.floor(Math.random() * resourceLinks.length)].getAttribute('href'), '_blank');
   });
 
-  // Speaker bios
+  // Speaker bio modals
   // Code to construct modal from HTML data, show it on click, and then destroy it on close
 
   // modalShow()
@@ -508,23 +509,26 @@ $(document).ready(function() {
     var bio = bioInfo.bio;
     var url = bioName;
 
-    history.pushState("", document.title, window.location.pathname + "#" + url);
+    history.pushState('', document.title, window.location.pathname + '#' + url);
 
-    $('body').addClass('modal-open');
+    currentPosition = $(window).scrollTop();
+
+    setTimeout(function() {
+      $('body').addClass('modal-open');
+    }, 500);
 
     modalCreate(name, title, bio);
-    $('.bio-overlay').show();
-
+    $('.modal-overlay').show();
   };
 
   // modalCreate()
   // Constructs a modal with the appropriate HTML markup
   var modalCreate = function(name, title, bio) {
     $('body').append(
-        '<div class="bio-overlay fadeIn animated-quick"> \
-            <div class="bio-modal fadeInDownBig animated-quick"> \
-              <div class="bio-modal-inner"> \
-                <div class="bio-modal-close"></div> \
+        '<div class="modal-overlay fadeIn animated-quick"> \
+            <div class="modal-content fadeInDownBig animated-quick"> \
+              <div class="modal-inner"> \
+                <div class="modal-close"></div> \
                 <h2>' + name + '</h2> \
                 <p style="margin-top:0px;"><i>' + title + '</i></p> \
                 <p>' + bio + '</p> \
@@ -537,9 +541,17 @@ $(document).ready(function() {
   // Destroys the modal
 
   var modalHide = function() {
-    history.pushState("", document.title, window.location.pathname);
+    history.pushState('', document.title, window.location.pathname);
     $('body').removeClass('modal-open');
-    $('.bio-overlay').remove();
+
+    $(window).scrollTop(currentPosition);
+
+    $('.modal-overlay').removeClass('fadeIn');
+    $('.modal-overlay').addClass('fadeOut');
+
+    setTimeout(function() {
+      $('.modal-overlay').remove();
+    }, 500);
   };
 
   // Clicking something with .box-speaker runs modalShow()
@@ -553,7 +565,7 @@ $(document).ready(function() {
 
   // Closing the modal by clicking the X
 
-  $(document).on('click', '.bio-modal-close', function(e) {
+  $(document).on('click', '.modal-close', function(e) {
     e.preventDefault();
     modalHide();
   });
@@ -593,11 +605,10 @@ $(document).ready(function() {
   $('nav a').click(function() {
     animating = true;
 
-    var offset = $(window).scrollTop();
+    var offset = $('body').scrollTop();
     var $anchor = $($(this).attr('href'));
-    // Commenting this out kind of fixes it because offset is not being added to the anchor position
-    // var anchorPosition = offset + ($anchor.offset().top);
     var anchorPosition = ($anchor.offset().top);
+
     $('html, body').animate({
       scrollTop: anchorPosition
     }, 500, function() {
@@ -605,6 +616,7 @@ $(document).ready(function() {
       return animating = false;
     });
     return false;
+
   });
 
 });
@@ -623,7 +635,7 @@ if (document.body.clientWidth > 600) {
       linkOffsets.push([link, typeof $(link).offset() === 'undefined' ? null : ~~$(link).offset().top + initialOffset]);
     }
     // Going bottom up so we catch the active link furthest down the page
-    linkOffsets.reverse(); 
+    linkOffsets.reverse();
 
     checkOffset($(window).scrollTop());
 
@@ -635,12 +647,12 @@ if (document.body.clientWidth > 600) {
         return timeout = setTimeout(function() {
           timeout = null;
           return checkOffset(scrollTop);
-        }, 50);
+        }, 200);
       }
     });
   });
 
-  /** How many pixels above a section before the navigation changes */
+  // How many pixels above a section before the navigation changes
   var offsetBuffer = 50;
 
   var checkOffset = function(scrollTop) {

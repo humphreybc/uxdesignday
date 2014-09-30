@@ -1,7 +1,10 @@
-.bio
-  display none
+// Modal CSS, used for speaker bios
 
-.bio-overlay
+.modal-open
+  overflow hidden
+  position fixed
+
+.modal-overlay
   position fixed
   z-index 500
   top 0
@@ -11,21 +14,25 @@
   background-color white
   display none
 
-  .bio-modal
+  .modal-content
     position relative
     z-index 1000
     margin 0px auto
     padding 30px
     box-sizing border-box
-    max-width 680px
     max-height 100%
-    overflow-y auto
+    overflow auto
     font-size 0.9em
     text-align left
     background-color white
 
-  .bio-modal-close
+    .modal-inner
+      margin 0 auto
+      max-width 680px
+
+  .modal-close
     margin-top 15px
+    padding 5px
     display block
     width 20px
     height 20px
@@ -39,10 +46,8 @@
     &:hover
       transform rotate(180deg)
 
-  .bio-modal-close:before
+  .modal-close:before
     content "×"
-
-
 
 
 
@@ -62,8 +67,6 @@
 }
 
 
-
-
 /* Fade in */
 @-webkit-keyframes fadeIn {
   0% {opacity: 0;}
@@ -80,6 +83,22 @@
           animation-name: fadeIn;
 }
 
+
+/* Fade out */
+@-webkit-keyframes fadeOut {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+@keyframes fadeOut {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+          animation-name: fadeOut;
+}
 
 
 
