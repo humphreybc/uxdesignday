@@ -4,8 +4,7 @@ var animating = false;
 var linkOffsets = [];
 
 $(document).ready(function() {
-  var $site = $('.site');
-  console.log('Version 2.0');
+  console.log('Version 2.1');
   console.log('Like looking under the hood? Feel free to help make this site better at https://github.com/humphreybc/uxdesignday');
 
   // Tooltips
@@ -58,7 +57,7 @@ $(document).ready(function() {
 
     history.pushState("", document.title, window.location.pathname + "#" + url);
 
-    $site.addClass('modal-open');
+    $('body').addClass('modal-open');
 
     modalCreate(name, title, bio);
     $('.bio-overlay').show();
@@ -68,7 +67,7 @@ $(document).ready(function() {
   // modalCreate()
   // Constructs a modal with the appropriate HTML markup
   var modalCreate = function(name, title, bio) {
-    $site.append(
+    $('body').append(
         '<div class="bio-overlay fadeIn animated-quick"> \
             <div class="bio-modal fadeInDownBig animated-quick"> \
               <div class="bio-modal-inner"> \
@@ -86,7 +85,7 @@ $(document).ready(function() {
 
   var modalHide = function() {
     history.pushState("", document.title, window.location.pathname);
-    $site.removeClass('modal-open');
+    $('body').removeClass('modal-open');
     $('.bio-overlay').remove();
   };
 
@@ -141,14 +140,15 @@ $(document).ready(function() {
   $('nav a').click(function() {
     animating = true;
 
-    var offset = $site.scrollTop();
+    var offset = $(window).scrollTop();
     var $anchor = $($(this).attr('href'));
-    var anchorPosition = offset + ($anchor.offset().top);
+    // var anchorPosition = offset + ($anchor.offset().top);
+    var anchorPosition = ($anchor.offset().top);
 
-    $site.animate({
+    $('html, body').animate({
       scrollTop: anchorPosition
     }, 500, function() {
-      checkOffset($site.scrollTop());
+      checkOffset($(window).scrollTop);
       return animating = false;
     });
     return false;
@@ -159,28 +159,30 @@ $(document).ready(function() {
 // Code to calculate scroll positions for navigation
 // Only runs when the screen is wider than 600px
 if (document.body.clientWidth > 600) {
-  var $site = $('.site');
 
   $(window).load(function() {
     var navLinks = $('#nav-links').find('li a');
-    var initialOffset = $('.site').scrollTop();
+    var initialOffset = $(window).scrollTop();
     for (var i = 0, len = navLinks.length; i < len; i++) {
       var item = navLinks[i];
       var link = $(item).attr('href');
+      // ~~ forces integer context so we don't accidentally subtract in string context
       linkOffsets.push([link, typeof $(link).offset() === 'undefined' ? null : ~~$(link).offset().top + initialOffset]);
     }
+    // Going bottom up so we catch the active link furthest down the page
+    linkOffsets.reverse(); 
 
-    linkOffsets.reverse();
-    checkOffset($site.scrollTop());
+    checkOffset($(window).scrollTop());
+
     var timeout = null;
-    return $site.scroll(function() {
+    return $(window).scroll(function() {
       var scrollTop;
       scrollTop = $(this).scrollTop();
       if (!timeout && !animating) {
         return timeout = setTimeout(function() {
           timeout = null;
           return checkOffset(scrollTop);
-        }, 100);
+        }, 50);
       }
     });
   });
