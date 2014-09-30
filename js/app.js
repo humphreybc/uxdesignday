@@ -174,12 +174,11 @@ if (document.body.clientWidth > 600) {
 
   $(window).load(function() {
     var navLinks = $('#nav-links').find('li a');
-    var initialOffset = $(window).scrollTop();
     for (var i = 0, len = navLinks.length; i < len; i++) {
       var item = navLinks[i];
       var link = $(item).attr('href');
       // ~~ forces integer context so we don't accidentally subtract in string context
-      linkOffsets.push([link, typeof $(link).offset() === 'undefined' ? null : ~~$(link).offset().top + initialOffset]);
+      linkOffsets.push([link, typeof $(link).offset() === 'undefined' ? null : ~~$(link).offset().top]);
     }
     // Going bottom up so we catch the active link furthest down the page
     linkOffsets.reverse();
