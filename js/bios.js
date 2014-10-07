@@ -78,6 +78,26 @@ var bios = {
     title: 'Picture or 1000 words? Visualising UX research',
     bio: '<p>Nick is a design researcher from a design background. He helps clients understand the people who interact with their brand, products or services, uncovering valuable insights to inform design decisions.</p> \
           <p>He’s a Specialist Design Integration Coach on the Better by Design program and from his own workshop he developed Mr. Tappy, a locally made tool for filming mobile device research.<p>'
+  },
+
+
+  RoxyHuntington: {
+    name: 'Roxy Huntington',
+    title: 'Accessorising my Karen Walker with my Onesie',
+    bio: '<p>Roxy is a Jill of all trades. At Trade Me she heads up the Design team for Trade Me’s Marketplace.</p> \
+          <p>Whether creating work for clients, users, or audiences her approach has always been to find out what makes them tick.</p> \
+          <p>Every year throughout her 15 years in the creative industry, its been reconfirmed that to her that communication and beauty should never be mutually exclusive.</p> \
+          <p>She is passionate about things beginning with the “f” sound; food, fashion, photography… and fuser fexperience.</p> \
+          <p>She was born in Sydney but has totally fallen in love with Wellington “Truly the coolest little capital”, and New Zealand in general.</p>'
+  },
+
+
+  RuthBrown: {
+    name: 'Ruth Brown',
+    title: 'Talk title coming soon',
+    bio: '<p>Ruth loves users. She works as the Head of UX at Trade Me trying to improve the experience for its 3.2 million users.</p> \
+          <p>Ruth’s first love was engineering until she realised that people were more interesting than maths.</p> \
+          <p>In the past she worked at Optimal Experience helping some of NZ’s best companies produce great things for their users.</p>'
   }
 
 
