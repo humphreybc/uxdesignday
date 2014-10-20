@@ -465,6 +465,30 @@ var bios = {
     bio: '<p>Ruth loves users. She works as the Head of UX at Trade Me trying to improve the experience for its 3.2 million users.</p> \
           <p>Ruth’s first love was engineering until she realised that people were more interesting than maths.</p> \
           <p>In the past she worked at Optimal Experience helping some of NZ’s best companies produce great things for their users.</p>'
+  },
+
+
+  PhilipJackson: {
+    name: 'Philip Jackson',
+    title: 'Talk title coming soon',
+    bio: '<p>Philip is the kuraCloud UX Co-ordinator at ADInstruments. He leads a team of Developers, Testers and Designers that are creating the engaging user interface for <a href="http://kuracloud.com/" target="_blank">kuraCloud.</a></p> \
+          <p>A programmer at heart, Philip has worked in the past on ADInstruments\' research products, including software used by heart researchers.</p>'
+  },
+
+
+  RyanBaker: {
+    name: 'Ryan Baker',
+    title: 'UX Sells',
+    bio: '<p>Ryan is the co-founder and CEO of Timely, a fast growing start-up with roots right here in Dunedin. The cloud-based platform is making it easier for service businesses, like clinics and salons, to grow and flourish. In two years the company has grown to have thousands  of customers in 50 countries.</p> \
+          <p>Prior to Timely, Ryan co-founded bookit.co.nz which was acquired by Trade Me in 2010.</p> \
+          <p>You can find Ryan on Twitter at <a href="https://twitter.com/ryanbakernz" target="_blank">@ryanbakernz</a> and read more about Timely at <a href="http://gettimely.com" target="_blank">gettimely.com.</a></p>'
+  },
+
+
+  AndrewWallace: {
+    name: 'Andrew Wallace',
+    title: 'Capturing the value of IP, design practitioner to IP owner',
+    bio: '<p>Andrew Wallace is a director of Bodystance® Limited, an IP company focussing on the development of solutions for common muscular skeletal problems. The Backpod® is the 1st product from a pipeline of new R&D design health concepts. Bodystance® has already won 2 German design awards, placed as a finalist in the NZ Innovator awards 2013. Bodystance® won a Deloitte Fast 50 rising star one to watch award 2014.</p>'
   }
 
 
