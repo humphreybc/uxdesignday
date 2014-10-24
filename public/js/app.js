@@ -370,7 +370,7 @@ var bios = {
 
   LanceWiggs: {
     name: 'Lance Wiggs',
-    title: 'Talk title coming soon',
+    title: 'Impotent fury',
     bio: '<p>Lance is an investor and advisor who believes that end user centred design drives growth, sustainability and value. He often gets grumpy about poor end user experiences, and getting better at not sharing.</p> \
           <p>Lance is a Better by Capital practitioner, helping companies become investable in this NZTE program. Prior to this he was a Better by Design practitioner, helping companies on their journey to becoming design-led. He is a member of two Return on Science investment committees, a program that helps turn research based IP into licensing deals and growing companies.</p> \
           <p>In 2013 he launched and failed, then, in 2014, relaunched Punakaiki Fund, which invests in early stage Design-led, Technology and Internet based businesses, including Dunedin’s own Timely and Wellington’s Mindscape.</p> \
@@ -397,7 +397,7 @@ var bios = {
 
   DanNewman: {
     name: 'Dan Newman',
-    title: 'Buy Experiences, Not Things',
+    title: 'Buy Experiences, not things',
     bio: '<p>Dan is the Global Marketing Design Director at Xero where he leads the design of <a href="http://xero.com" target="_blank">xero.com</a> and all things brand. With a team spread around the world he’s helping convince small businesses to “Try Xero for free”.</p> \
           <p>Previously Dan designed skeuomorphic mobile & tablet applications for large media companies. He’s very sorry for the harm he caused. Before that, websites for clothing made from merino sheep & interactives for museums with colossal squids. \
           <p>He lives in Wellington where he enjoys craft beer and <a href="http://www.instagram.com/danserif" target="_blank">taking photos.</a></p> \
@@ -416,7 +416,7 @@ var bios = {
 
   LyndaHenderson: {
     name: 'Lynda Henderson',
-    title: 'Talk title coming soon',
+    title: 'Simple discrimination',
     bio: '<p>Lynda Henderson is the Creative Director at Otago Polytechnic’s product realisation and communication design studio. Lynda leads a team of 20 designers with diverse skill sets from – graphic design, illustration, animation, software development, and product design.</p> \
           <p>With over 20 years experience in the creative industry she’s worked on it all: computer graphics, print, illustration, web and mobile app design, brand management, and digital and 3D signage - all with a user-centred focus.</p> \
           <p>She’s in this game because of her deep interest in the diverse and practical application of communication strategy, user experience design and how design can influence behaviour.</p>'
@@ -433,7 +433,7 @@ var bios = {
 
   BenjaminHumphrey: {
     name: 'Benjamin Humphrey',
-    title: 'Talk title coming soon',
+    title: 'An engaging first impression',
     bio: '<p>Benjamin is a product designer at <a href="https://www.atlassian.com/" target="_blank">Atlassian</a> in Sydney and is the founder of this very conference, UX Design Day.<p> \
           <p>In the past he’s been a co-founder of <a href="http://www.omgubuntu.co.uk/" target="_blank">OMG! Ubuntu!,</a> founder of The Ubuntu Manual Project, and Design Lead for <a href="https://delicious.com/" target="_blank">delicious.com</a> at AVOS. Benjamin has also spoken about design at conferences &amp; meetups, freelanced for a while, and competed in Startup Weekend.<p> \
           <p>You can find Benjamin on Twitter at <a href="https://twitter.com/humphreybc" target="_blank">@humphreybc,</a> and follow his blog at <a href="http://humphreybc.com/" target="_blank">humphreybc.com.</a></p>'
@@ -450,7 +450,7 @@ var bios = {
 
   RoxyHuntington: {
     name: 'Roxy Huntington',
-    title: 'Accessorising my Karen Walker with my Onesie',
+    title: 'Accessorising my Karen Walker with my onesie',
     bio: '<p>Roxy is a Jill of all trades. At Trade Me she heads up the Design team for Trade Me’s Marketplace.</p> \
           <p>Whether creating work for clients, users, or audiences her approach has always been to find out what makes them tick.</p> \
           <p>Every year throughout her 15 years in the creative industry, its been reconfirmed that to her that communication and beauty should never be mutually exclusive.</p> \
@@ -461,7 +461,7 @@ var bios = {
 
   RuthBrown: {
     name: 'Ruth Brown',
-    title: 'Talk title coming soon',
+    title: 'Accessorising my Karen Walker with my onesie',
     bio: '<p>Ruth loves users. She works as the Head of UX at Trade Me trying to improve the experience for its 3.2 million users.</p> \
           <p>Ruth’s first love was engineering until she realised that people were more interesting than maths.</p> \
           <p>In the past she worked at Optimal Experience helping some of NZ’s best companies produce great things for their users.</p>'
@@ -470,7 +470,7 @@ var bios = {
 
   PhilipJackson: {
     name: 'Philip Jackson',
-    title: 'Talk title coming soon',
+    title: 'UX and me: an abridged history',
     bio: '<p>Philip is the kuraCloud UX Co-ordinator at ADInstruments. He leads a team of Developers, Testers and Designers that are creating the engaging user interface for <a href="http://kuracloud.com/" target="_blank">kuraCloud.</a></p> \
           <p>A programmer at heart, Philip has worked in the past on ADInstruments\' research products, including software used by heart researchers.</p>'
   },
